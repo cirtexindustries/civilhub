@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/lcv8idl.css">
+    <link rel="icon" type="image/png" href="public/img/favicon.png"/>
+    <script src="https://kit.fontawesome.com/4cadf5399b.js" crossorigin="anonymous"></script>
+    <title>Technical Downloads | Civil Hub</title>
+</head>
+<body>
+    <div class="ctx-background-blur" onclick="removeCreatePost()" style="display:none"></div>
+    <div class="ctx-loader" id="ctxLoader"></div>
+    <div class="ctx-hub-bg">
+        <div class="ctx-login" id="signInForm" style="display:none;">
+            <form class="ctx-login-box" onsubmit="return false">
+                <div class="ctx-login-header">
+                    <h2>Civil Hub</h2>
+                    <h1 id="authTitle">Sign In</h1>
+                    <p class="ctx-text-btn" id="switcher" onclick="switchSignUp('signup')">New? Register an account</p>
+                    <p class="err" id="err">Error test</p>
+                </div>
+                <div class="ctx-input-fields" id="inputFields"></div>
+                <div class="ctx-signup-btns">
+                    <p class="ctx-text-btn" onclick="switchSignUp('reset')">Forgot your password?</p>
+                    <button id="authBtn" onclick="signIn()">Sign In</button>
+                </div>
+                <p class="ctx-disclaimer">By using the Cirtex® Civil Hub, you agree to our Terms & Conditions.</p>
+            </form>
+        </div>
+        <div class="ctx-dashboard" id="ctxDashboard" style="display:none">
+            <div class="ctx-dash-header" id="headerMenu"></div>
+            <div class="ctx-dash-content">
+                <!-- Menu -->
+                <div class="ctx-dash-sidebar"id="menu"></div>
+                <!-- End Menu -->
+
+                <!-- Main Content -->
+                <div class="ctx-downloads" id="downloadContent">
+                    <div>
+                        <h2>Downloads</h2>
+                        <br>
+                        <h4>Triton Vault</h4>
+                        <div id="tritonVaultDownloads"></div>
+                        <br>
+                        <h4>Triton</h4>
+                        <div id="tritonDownloads"></div>
+                        <br>
+                        <h4>RainSmart</h4>
+                        <div id="rainSmartDownloads"></div>
+                    </div>
+                </div>
+                <!-- End Main Content -->
+
+                <!-- Sidebar -->
+                <div class="ctx-dash-body-container" id="rightColumn"></div>
+                <!-- End Sidebar -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
+    <script src="public/js/authentication.js"></script>
+    <script src="public/js/mainElements.js"></script>
+    <script src="public/js/preferences.js"></script>
+    <script src="public/js/json/downloadItems.js"></script>
+    
+    <!-- https://cirtexcivil.co.nz/applications/civilhub/ -->
+</body>
+</html>
