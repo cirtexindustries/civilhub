@@ -93,7 +93,6 @@ const returnPostPic = async (doc) => {
 // Load posts
 function renderPost(doc, timePosted) {
     const postData = doc.data()
-    console.log(doc)
     // Inline HTML
     const postContainer = `
         <div class="ctx-post-wrapper" id="POST${doc.id}">
