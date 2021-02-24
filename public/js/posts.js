@@ -110,7 +110,7 @@ function renderPost(doc, timePosted) {
                             ${(postData.postedByID == currentUser.uid)
                                 ?`<i class="far fa-ellipsis-h icon-clickable" id="POSTELLIPSES${doc.id}"></i>
                                     <div class="ctx-post-dropdown" style="display:none" id="POSTOPTIONS${doc.id}">
-                                        <div class="ctx-dropdown-option" onclick="renderSinglePostEdit(${doc})">
+                                        <div class="ctx-dropdown-option" onclick="editSinglePost('${doc.id}')">
                                             <i class="fad fa-pencil"></i> Edit Post
                                         </div>
                                         <div class="ctx-dropdown-option" onclick="deletePost(${doc.id})">
@@ -674,8 +674,8 @@ function editSinglePost(postID) {
 
 // Render individual/single post
 function renderSinglePostEdit(post) {
+    console.log(post)
     const postData = post.data()
-    console.log(postData)
     const postContainer = `
         <div class="ctx-post ctx-new-post" id="newPost">
             <div class="ctx-profile-img">
