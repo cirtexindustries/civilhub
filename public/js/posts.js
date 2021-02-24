@@ -674,8 +674,8 @@ function editSinglePost(postID) {
 
 // Render individual/single post
 function renderSinglePostEdit(post) {
-    console.log(post)
     const postData = post.data()
+    console.log(postData)
     const postContainer = `
         <div class="ctx-post ctx-new-post" id="newPost">
             <div class="ctx-profile-img">
