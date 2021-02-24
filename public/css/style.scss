@@ -431,7 +431,7 @@ iframe {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-end;
         padding: 25px 0;
         margin: 0 0 40px 0;
         border-bottom: solid 1px #ddd;
@@ -604,9 +604,13 @@ iframe {
     p {
         font-size: 12px!important;
         font-weight: 400!important;
+        width: 60px;
+        height: 60px;
 
         span {
+            display: block;
             font-weight: 500;
+            font-size: 30px;
         }
     }
 }
@@ -650,6 +654,16 @@ iframe {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+
+    .ctx-post-dropdown {
+        background: $grey;
+
+        .ctx-dropdown-option {
+            &:hover {
+                background: $white;
+            }
+        }
+    }
 
     span:nth-child(2) {
         color: #888;

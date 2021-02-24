@@ -99,6 +99,10 @@ function renderPost(doc, timePosted) {
             <div class="ctx-post" id="${doc.id}">
                 <div class="ctx-profile-img">
                     <img id=${doc.id + 'profilepic'} src="public/img/default-user-icon.jpg">
+                    <div class="likesComments">
+                        <div><p><span id="likes${doc.id}">0</span> Upvotes</p></div>
+                        <div><p><span id="comments${doc.id}">0</span> Replies</p></div>
+                    </div>
                 </div>
                 <div class="ctx-post-content" id=POSTBODY${doc.id}>
                     <div class="ctx-post-header">
@@ -173,17 +177,12 @@ function renderPost(doc, timePosted) {
                     : ""
                     }
                     <div class="post-actions ctx-post-reactions">
-                        <div class="likesComments">
-                            <div><p><span id="likes${doc.id}">0</span> Upvotes</p></div>
-                            &nbsp;&nbsp;
-                            <div><p><span id="comments${doc.id}">0</span> Replies</p></div>
-                        </div>
                         <div class="likeComment">
                             <div onclick="startComment('${doc.id}')">
-                            <i class="fad fa-comment-lines"></i> Reply
+                            <i class="fad fa-comment-lines"></i> Reply to Post
                             </div>
                             <div style="margin: 0 0 0 10px;" id="${doc.id}liked" onclick="likePost('${doc.id}', event)">
-                            <i class="fad fa-thumbs-up"></i> Upvote
+                            <i class="fad fa-thumbs-up"></i> Upvote Post
                             </div>
                         </div>
                     </div>
@@ -1142,7 +1141,7 @@ function likePost(id, e) {
                                 let currentLikes = document.querySelector(`[id='likes${doc.id}']`).innerHTML
                                 document.querySelector(`[id='likes${doc.id}']`).innerHTML = parseInt(parseInt(currentLikes) + 1)
                             } else { // Unlike Post
-                                e.target.innerHTML = `<i class="fad fa-thumbs-up"></i> Upvote`
+                                e.target.innerHTML = `<i class="fad fa-thumbs-up"></i> Upvote Post`
                                 posts.doc(result.id).update({
                                     likedBy: firebase.firestore.FieldValue.arrayRemove(currentUser.email)
                                 })

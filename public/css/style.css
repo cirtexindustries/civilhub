@@ -528,9 +528,9 @@ iframe {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding: 25px 0;
   margin: 0 0 40px 0;
   border-bottom: solid 1px #ddd;
@@ -736,10 +736,14 @@ iframe {
 .likesComments p {
   font-size: 12px !important;
   font-weight: 400 !important;
+  width: 60px;
+  height: 60px;
 }
 
 .likesComments p span {
+  display: block;
   font-weight: 500;
+  font-size: 30px;
 }
 
 @media (max-width: 800px) {
@@ -808,6 +812,14 @@ iframe {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+.ctx-post-details .ctx-post-dropdown {
+  background: #F4F4F4;
+}
+
+.ctx-post-details .ctx-post-dropdown .ctx-dropdown-option:hover {
+  background: #FFFFFF;
 }
 
 .ctx-post-details span:nth-child(2) {
@@ -2969,5 +2981,6 @@ button:hover {
 
 .ctx-alert .ctx-alert-body p {
   font-size: 14px;
+  font-weight: normal;
 }
 /*# sourceMappingURL=style.css.map */
