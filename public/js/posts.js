@@ -1,13 +1,14 @@
-
 // Set default category
 let currentCategory = "Everything"
 let selectedCategory = "Everything"
+let filter = "postedDate" // postedDate, likedBy
+let order = "desc" // asc, desc
 
 // Get data on initialise
 auth.onAuthStateChanged(function(user){
     currentUser = auth.currentUser
     if(user) {
-        posts.orderBy("postedDate", "desc")
+        posts.orderBy(filter, order)
             .where("category", "array-contains", `${currentCategory}`)
             .limit(4)
             .get()
@@ -554,7 +555,7 @@ function renderPostCategory(selectedCategory, highlightedCategory) {
     clearPosts()
 
     posts.where("category", "array-contains", `${currentCategory}`)
-        .orderBy("postedDate", "desc")
+        .orderBy(filter, order)
         .limit(4)
         .get()
         .then(querySnapshot => {
@@ -588,7 +589,7 @@ function loadMorePosts() {
 
     // Reference the post thread
     const lastDoc = posts.where("category", "array-contains", `${currentCategory}`)
-        .orderBy("postedDate", "desc")
+        .orderBy(filter, order)
         .limit(renderedLength)
 
     // Find the last past in the currently rendered thread, use that as a start point to load 3 more posts
@@ -597,7 +598,7 @@ function loadMorePosts() {
         let lastPost = snapshotDoc.docs[snapshotDoc.docs.length - 1]
 
         const next = posts.where("category", "array-contains", `${currentCategory}`)
-            .orderBy("postedDate", "desc")
+            .orderBy(filter, order)
             .startAfter(lastPost)
             .limit(4)
 
@@ -608,21 +609,24 @@ function loadMorePosts() {
                     renderPost(doc, timePosted)
                 })
 
-                // Remove "Load more posts" button
+                // Remove "Load more posts" button from current position
                 let postContainer = document.querySelector('#posts')
                 let loadPostsBtn = document.querySelector(`#loadPosts`)
                 postContainer.removeChild(loadPostsBtn)
         
-                // Insert "Load more posts" button
+                // Insert "Load more posts" button at the bottom
+                const morePosts = `
+                    <div id="loadPosts" onclick="loadMorePosts()" class="ctx-load-posts">
+                        <a>Load more posts</a>
+                    </div>
+                `
+                postContainer.insertAdjacentHTML('beforeend', morePosts)
+
+                /*
                 let renderedLength = postContainer.children.length - 1
                 if (snapshot.docs.length > renderedLength) {
-                    const morePosts = `
-                        <div id="loadPosts" onclick="loadMorePosts()" class="ctx-load-posts">
-                            <a>Load more posts</a>
-                        </div>
-                    `
-                    postContainer.insertAdjacentHTML('beforeend', morePosts)
                 }
+                */
             })
     })
 }
