@@ -738,13 +738,13 @@ iframe {
   font-weight: 400 !important;
   width: 60px;
   height: 60px;
-  color: #2B2D37;
+  color: #444;
 }
 
 .likesComments p span {
   display: block;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 @media (max-width: 800px) {
@@ -921,7 +921,7 @@ iframe {
 .ctx-profile-img .comment-img {
   width: 50px;
   height: 50px;
-  margin: 10px 10px -10px 10px;
+  margin: 10px 0;
 }
 
 .ctx-profile-img i {
@@ -1159,7 +1159,7 @@ iframe {
           flex-direction: column;
   background: #F4F4F4;
   padding: 12px;
-  margin: 0 10px 0px 20px;
+  margin: 0 0 0 20px;
   border-radius: 10px;
   width: 100%;
   height: -webkit-fit-content;
@@ -1173,9 +1173,9 @@ iframe {
   content: "";
   position: absolute;
   top: 25px;
-  right: -20px;
+  left: -20px;
   border: solid 10px transparent;
-  border-left: solid 10px #F4F4F4;
+  border-right: solid 10px #F4F4F4;
 }
 
 .ctx-comment-wrapper .ctx-comment-content .start-post {
@@ -2368,6 +2368,37 @@ button:hover {
   color: #FFFFFF;
 }
 
+.ctx-post-categories p {
+  font-size: 13px;
+}
+
+.ctx-post-categories select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #e4e4e4;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  min-width: 130px;
+  text-indent: 5px;
+}
+
+.ctx-post-categories .ctx-dropdown-wrapper {
+  position: relative;
+}
+
+.ctx-post-categories .ctx-dropdown-wrapper::after {
+  content: "\f107";
+  font-family: "Font Awesome 5 Pro";
+  position: absolute;
+  right: 10px;
+  top: 52%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+}
+
 @media (max-width: 800px) {
   .ctx-post-categories {
     width: 100%;
@@ -2983,5 +3014,30 @@ button:hover {
 .ctx-alert .ctx-alert-body p {
   font-size: 14px;
   font-weight: normal;
+}
+
+.ctx-sign-out {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  color: #FFFFFF;
+  background: #E80032;
+  border-radius: 50px;
+  font-size: 18px;
+  -webkit-transition: ease .2s;
+  transition: ease .2s;
+  cursor: pointer;
+}
+
+.ctx-sign-out:hover {
+  opacity: 0.7;
 }
 /*# sourceMappingURL=style.css.map */

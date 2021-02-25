@@ -606,12 +606,12 @@ iframe {
         font-weight: 400!important;
         width: 60px;
         height: 60px;
-        color: #2B2D37;
+        color: #444;
 
         span {
             display: block;
             font-weight: 500;
-            font-size: 30px;
+            font-size: 25px;
         }
     }
 }
@@ -752,7 +752,7 @@ iframe {
     .comment-img {
         width: 50px;
         height: 50px;
-        margin: 10px 10px -10px 10px;
+        margin: 10px 0;
     }
 
     i {
@@ -952,7 +952,7 @@ iframe {
         flex-direction: column;
         background: $grey;
         padding: 12px;
-        margin: 0 10px 0px 20px;
+        margin: 0 0 0 20px;
         border-radius: 10px;
         width: 100%;
         height: fit-content;
@@ -963,9 +963,9 @@ iframe {
             content: "";
             position: absolute;
             top: 25px;
-            right: -20px;
+            left: -20px;
             border: solid 10px transparent;
-            border-left: solid 10px $grey;
+            border-right: solid 10px #F4F4F4;
         }
 
         .start-post {
@@ -1886,6 +1886,34 @@ button:hover {
         background: $red;
         color: $white;
     }
+
+    p {
+        font-size: 13px;
+    }
+
+    select {
+        appearance: none;
+        background: #e4e4e4;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        min-width: 130px;
+        text-indent: 5px;
+    }
+    
+    .ctx-dropdown-wrapper {
+        position: relative;
+
+        &::after {
+            content: "\f107";
+            font-family: $icons;
+            position: absolute;
+            right: 10px;
+            top: 52%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+    }
 }
 
 @media(max-width: 800px) {
@@ -2387,5 +2415,23 @@ button:hover {
             font-size: 14px;
             font-weight: normal;
         }
+    }
+}
+
+.ctx-sign-out {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: $white;
+    background: $red;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: ease .2s;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
     }
 }

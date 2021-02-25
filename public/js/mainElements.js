@@ -105,7 +105,7 @@ const headerMenu = `
           <span class="tooltiptext">Academy</span>
         </div>
     </div>
-    <button onclick="signOut()">Sign Out</button>
+    <i onclick="signOut()" class="fad fa-sign-out ctx-sign-out" aria-hidden="true"></i>
     </div>
     `
 document.querySelector('#headerMenu').insertAdjacentHTML('beforeend', headerMenu)

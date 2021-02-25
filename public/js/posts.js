@@ -52,6 +52,15 @@ function startPostStatic() {
                 <div class="ctx-post-category" id="cat_paving" onclick="renderPostCategory('Permeable Paving', this.id)">Permeable Paving</div>
                 <div class="ctx-scroll-fade"></div>
             </div>
+            <div class="ctx-post-categories">
+                <p style="margin-right:10px">Filter posts</p>
+                <div class="ctx-dropdown-wrapper">
+                    <select id="filterPostOrder">
+                        <option value="postedDate">Newest First</option>
+                        <option value="likedBy">Top Votes</option>
+                    </select>
+                </div>
+            </div>
             <div class="ctx-post ctx-new-post" id="startNewPost" style="z-index:1">
                 <div class="ctx-profile-img">
                     <img id="userPostProfileImg" src="public/img/default-user-icon.jpg">
@@ -62,6 +71,16 @@ function startPostStatic() {
             </div>
             `
         document.querySelector('#posts').insertAdjacentHTML('beforebegin', postContainer)
+
+        document.querySelector('#filterPostOrder').addEventListener("change", (event) => {
+            let selection = event.target.value
+            filter = selection
+            order = "desc"
+            if (selection == "likedBy") {
+                order = "asc"
+            }
+            renderPostCategory(selectedCategory, 'cat_everything')
+        })
     }
 }
 
@@ -242,18 +261,6 @@ function renderPost(doc, timePosted) {
 
     let postID = doc.id
     fetchComments(postID)
-}
-
-function addDeleteBtn(doc) {
-    return `<i id="${doc}" onclick="deletePost(this.id)" class="fad fa-trash post-edit-btn"></i>`
-}
-
-function addDeleteBtnComment(commentID, originalPostID) {
-    return `<i style="margin-top:15px" id="${commentID}" onclick="deleteComment('${commentID}', '${originalPostID}')" class="fad fa-trash post-edit-btn comment-edit-btn"></i>`
-}
-
-function addEditBtn(postID) {
-    return `<i class="fad fa-pencil post-edit-btn" onclick="editSinglePost('${postID}')"></i>`
 }
 
 function openLightbox(id) {
@@ -907,6 +914,9 @@ function renderComment(postInfo, postID) {
     const post = document.querySelector(`#COMMENTCONTAINER${postID}`)
     const comment = `
         <div class="ctx-comment-wrapper" id="${postInfo.id}">
+            <div class="ctx-profile-img">
+                <img class="ctx-profile-img img comment-img" id="profilePic${postInfo.id}" src="public/img/default-user-icon.jpg">
+            </div>
             <div class="ctx-comment-wrapper ctx-comment-content">
                 <div class="ctx-comment-header">
                     <div>
@@ -963,9 +973,6 @@ function renderComment(postInfo, postID) {
                         })
                     }</p>
                 </div>
-            </div>
-            <div class="ctx-profile-img">
-                <img class="ctx-profile-img img comment-img" id="profilePic${postInfo.id}" src="public/img/default-user-icon.jpg">
             </div>
         </div>
     `
