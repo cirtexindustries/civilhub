@@ -1132,9 +1132,9 @@ iframe {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -2378,10 +2378,12 @@ button:hover {
           appearance: none;
   background: #e4e4e4;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   padding: 5px;
   min-width: 130px;
   text-indent: 5px;
+  font-size: 12px;
+  outline: none;
 }
 
 .ctx-post-categories .ctx-dropdown-wrapper {

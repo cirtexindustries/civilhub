@@ -1,6 +1,6 @@
 // Set default category
 let currentCategory = "Everything"
-let selectedCategory = "Everything"
+let selectedCategory = "cat_everything"
 let filter = "postedDate" // postedDate, likedBy
 let order = "desc" // asc, desc
 
@@ -79,7 +79,7 @@ function startPostStatic() {
             if (selection == "likedBy") {
                 order = "asc"
             }
-            renderPostCategory(selectedCategory, 'cat_everything')
+            renderPostCategory(currentCategory, selectedCategory)
         })
     }
 }
@@ -551,8 +551,11 @@ function categorisePost(postContent) {
 }
 
 // Load posts by selected category
-function renderPostCategory(selectedCategory, highlightedCategory) {
-    currentCategory = selectedCategory
+function renderPostCategory(category, highlightedCategory) {
+    currentCategory = category
+    selectedCategory = highlightedCategory
+    console.log(currentCategory)
+    console.log(highlightedCategory)
     let postCatParent = document.querySelector('#postCategories')
     for (i = 0; i < postCatParent.children.length; i++) {
         postCatParent.children[i].classList.remove('ctx-category-selected')
