@@ -55,9 +55,15 @@ function startPostStatic() {
             <div class="ctx-post-categories">
                 <p style="margin-right:10px">Filter posts</p>
                 <div class="ctx-dropdown-wrapper">
-                    <select id="filterPostOrder">
+                    <select id="filterPostType">
                         <option value="postedDate">Newest First</option>
                         <option value="likedBy">Top Votes</option>
+                    </select>
+                </div>
+                <div class="ctx-dropdown-wrapper">
+                    <select id="filterPostOrder">
+                        <option value="desc">Descending</option>
+                        <option value="asc">Ascending</option>
                     </select>
                 </div>
             </div>
@@ -72,13 +78,19 @@ function startPostStatic() {
             `
         document.querySelector('#posts').insertAdjacentHTML('beforebegin', postContainer)
 
-        document.querySelector('#filterPostOrder').addEventListener("change", (event) => {
+        document.querySelector('#filterPostType').addEventListener("change", (event) => {
             let selection = event.target.value
             filter = selection
             order = "desc"
             if (selection == "likedBy") {
                 order = "asc"
             }
+            renderPostCategory(currentCategory, selectedCategory)
+        })
+
+        document.querySelector('#filterPostOrder').addEventListener("change", (event) => {
+            let selection = event.target.value
+            order = selection
             renderPostCategory(currentCategory, selectedCategory)
         })
     }
@@ -554,8 +566,6 @@ function categorisePost(postContent) {
 function renderPostCategory(category, highlightedCategory) {
     currentCategory = category
     selectedCategory = highlightedCategory
-    console.log(currentCategory)
-    console.log(highlightedCategory)
     let postCatParent = document.querySelector('#postCategories')
     for (i = 0; i < postCatParent.children.length; i++) {
         postCatParent.children[i].classList.remove('ctx-category-selected')

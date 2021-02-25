@@ -2388,6 +2388,7 @@ button:hover {
 
 .ctx-post-categories .ctx-dropdown-wrapper {
   position: relative;
+  margin: 0 10px 0 0;
 }
 
 .ctx-post-categories .ctx-dropdown-wrapper::after {

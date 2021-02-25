@@ -1905,6 +1905,7 @@ button:hover {
     
     .ctx-dropdown-wrapper {
         position: relative;
+        margin: 0 10px 0 0;
 
         &::after {
             content: "\f107";
