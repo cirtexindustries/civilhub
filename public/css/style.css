@@ -536,9 +536,9 @@ iframe {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   padding: 25px 0 25px 0;
   margin: 0 0 25px 0;
@@ -740,6 +740,8 @@ iframe {
 
 .likesComments {
   margin: 0;
+  background: #F4F4F4;
+  border-radius: 10px;
 }
 
 .likesComments p {
@@ -2496,6 +2498,14 @@ button:hover {
   .ctx-post-categories::-webkit-scrollbar {
     display: none;
   }
+}
+
+.categories-post {
+  margin: 0;
+}
+
+.categories-post div {
+  margin: 0 5px 0 0 !important;
 }
 
 .ctx-unmatched-filter {

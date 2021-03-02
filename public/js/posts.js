@@ -235,7 +235,8 @@ function renderPost(doc, timePosted) {
                             <div><p><span id="likes${doc.id}">0</span> Upvotes</p></div>
                             <div><p><span id="comments${doc.id}">0</span> Replies</p></div>
                         </div>`
-                        :""}
+                        :``}
+                        <div class="ctx-post-categories categories-post" id="postCats${doc.id}"></div>
                         <div class="likeComment">
                             <div onclick="startComment('${doc.id}')">
                             <i class="fad fa-comment-lines"></i> Reply to Post
@@ -301,6 +302,38 @@ function renderPost(doc, timePosted) {
 
     let postID = doc.id
     fetchComments(postID)
+
+    // List post categories
+    let categories = postData.category
+    for (i = 0; i < categories.length; i++) {
+        if (categories[i] != "Everything") {
+            const category = `
+            <div class="ctx-post-category" onclick="renderPostCategory('${categories[i]}', 
+            convertCategory('${categories[i]}'))">${categories[i]}</div>
+            `
+            document.querySelector(`#postCats${doc.id}`).insertAdjacentHTML('afterbegin', category)
+            return
+        }
+    }
+}
+
+function convertCategory(category) {
+    switch (category) {
+        case "Erosion & Sediment Control":
+            return "cat_esc"
+        case "Block Retaining Systems":
+            return "cat_blockretaining"
+        case "Stormwater":
+            return "cat_stormwater"
+        case "Pavements":
+            return "cat_pavements"
+        case "Sediment Retention Ponds":
+            return "cat_srp"
+        case "Slope Stability":
+            return "cat_slopestability"
+        case "Paving":
+            return "cat_paving"
+    }
 }
 
 function openLightbox(id) {
