@@ -520,6 +520,10 @@ iframe {
   font-family: inherit !important;
 }
 
+.ctx-post .ctx-post-content .ctx-comment-container div:last-child {
+  margin-bottom: 0;
+}
+
 .ctx-post .post-actions {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -536,7 +540,7 @@ iframe {
           justify-content: flex-end;
   width: 100%;
   padding: 15px 0 25px 0;
-  margin: 0 0 30px 0;
+  margin: 0 0 25px 0;
   border-bottom: solid 1px #ddd;
 }
 

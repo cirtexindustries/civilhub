@@ -232,7 +232,7 @@ function renderPost(doc, timePosted) {
                             </div>
                         </div>
                     </div>
-                    <div id="COMMENTCONTAINER${doc.id}"></div>
+                    <div class="ctx-comment-container" id="COMMENTCONTAINER${doc.id}"></div>
                 </div>
             </div>
         </div>
