@@ -721,6 +721,70 @@ function renderSinglePost(postID) {
     })
 }
 
+function editComment(commentID, postID) {
+    posts.doc(`${postID}`)
+        .collection('comments')
+        .doc(`${commentID}`)
+        .get()
+        .then(comment => {
+            comment = comment.data()
+            // Remove existing comment from frontend
+            document.querySelector(`[id="${commentID}"]`).remove()
+            document.querySelector('body').removeChild(document.querySelector('.tooltip-blur'))
+
+            const post = document.querySelector(`#COMMENTCONTAINER${postID}`)
+            const commentContainer = `
+            <div class="ctx-comment-wrapper" id="comment${commentID}">
+                <div class="ctx-profile-img">
+                    <img class="ctx-profile-img img comment-img" src="${document.querySelector('#uploadProfilePicture').src}">
+                </div>
+                <div class="ctx-comment-wrapper ctx-comment-content ctx-start-comment">
+                    <textarea maxlength="400" oninput="autoGrow(this)" class="start-post" id="commentContent${commentID}" placeholder="What would you like to say?" contenteditable>${comment.comment}</textarea>
+
+                    <div class="tag-popup" id="postUserTagPopup" style="display:none"></div>
+
+                    ${(comment.commentTag != "")
+                    ?`<input type="text" class="tag-post tag-comment add-tag" autocomplete="off" onkeyup="searchTag(this.value, false)" id="commentTagging" placeholder="Type the name of someone to tag" value="${comment.commentTag}">`
+                    :`<input type="text" class="tag-post tag-comment" autocomplete="off" onkeyup="searchTag(this.value, false)" id="commentTagging" placeholder="Type the name of someone to tag" style="display:none">`}
+
+                    <div class="tag-popup tag-popup-comment" id="userTagPopupComment" style="display:none"></div>
+                    
+                    <input onchange="commentPicPreview()" style="display:none" id="commentUploadIMG" type="file">
+                    <div class="ctx-post-img ctx-comment-img" style="display:none">
+                        <div class="ctx-post-img-wrapper">
+                            <img id="commentPicPreview">
+                        </div>
+                    </div>
+
+                    <div class="post-actions likeComment post-creation comment-creation">
+                        <section class="ctx-post-options">
+                            <div id="uploadPhotoComment" onclick="document.querySelector('#commentUploadIMG').click()">
+                                <i class="fad fa-image-polaroid"></i>
+                            </div>
+                            <div onclick="commentTagging()">
+                                <i class="fad fa-at"></i>
+                            </div>
+                        </section>
+                        <div class="post-btn comment-btn" onclick="updateComment('${postID}', '${commentID}')">
+                            <i class="fad fa-paper-plane"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>`
+            post.insertAdjacentHTML('beforebegin', commentContainer)
+
+            const commentBG = `<div class="ctx-background-blur tooltip-blur comment-blur" id="commentBG" onclick="closeEditComment(event, 'comment${commentID}', '${postID}', '${commentID}')"></div>`
+
+            let commentWrapper = document.querySelectorAll('.ctx-comment-wrapper')
+            commentWrapper.forEach(comment => {
+                comment.style.zIndex = "12"
+            })
+
+            document.querySelector('body').insertAdjacentHTML('afterbegin', commentBG)
+        })
+}
+
 // Edit single post
 function editSinglePost(postID) {
     // Unselect all post categories when rendering the notification
@@ -826,7 +890,42 @@ function updatePost(postID) {
             clearPosts()
             document.querySelector('.ctx-background-blur').style.display = "none"
             renderPostCategory('Everything', 'cat_everything')
+            alert("Your post has been updated.", "Success!")
         }).catch(err => {console.log(err.message)})
+}
+
+// Update Comment
+function updateComment(postID, commentID) {
+    posts.doc(`${postID}`)
+        .collection("comments")
+        .doc(`${commentID}`)
+        .update({
+            comment: document.querySelector(`#commentContent${commentID}`).value
+        }).then(() => {
+
+            let commentWrapper = document.querySelectorAll('.ctx-comment-wrapper')
+            commentWrapper.forEach(comment => {
+                comment.style.zIndex = "inherit"
+            })
+
+            // Remove comment input container
+            let commentContainer = document.querySelector(`#comment${commentID}`)
+            if (commentContainer) {
+                commentContainer.remove()
+            }
+            console.log("1")
+            // Render updated comment
+            posts.doc(`${postID}`)
+                .collection("comments")
+                .doc(`${commentID}`)
+                .get()
+                .then(item => {
+                    console.log("2")
+                    renderComment(item, `${postID}`)
+                    document.querySelector('body').removeChild(document.querySelector('#commentBG'))
+                    alert("Your comment has been updated.", "Success!")
+                }) 
+        })
 }
 
 // Removes the generated fields for creating a new post
@@ -899,17 +998,17 @@ function deletePost(postID) {
 // COMMENT FUNCTIONS //
 
 function startComment(id) {
-    if (document.getElementById(`#${id}comment`) == null) {
+    if (document.querySelector(`[id="comment${id}"]`) == null) {
         const post = document.querySelector(`#COMMENTCONTAINER${id}`)
         const commentContainer = `
-        <div class="ctx-comment-wrapper" id="${id}comment">
+        <div class="ctx-comment-wrapper" id="comment${id}">
             <div class="ctx-profile-img">
                 <img class="ctx-profile-img img comment-img" src="${document.querySelector('#uploadProfilePicture').src}">
             </div>
             <div class="ctx-comment-wrapper ctx-comment-content ctx-start-comment">
                 <textarea maxlength="400" oninput="autoGrow(this)" class="start-post" id="commentContent${id}" placeholder="What would you like to say?" contenteditable></textarea>
+                
                 <div class="tag-popup" id="postUserTagPopup" style="display:none"></div>
-
                 <input type="text" class="tag-post tag-comment" autocomplete="off" onkeyup="searchTag(this.value, false)" id="commentTagging" placeholder="Type the name of someone to tag" style="display:none">
                 <div class="tag-popup tag-popup-comment" id="userTagPopupComment" style="display:none"></div>
                 
@@ -929,7 +1028,7 @@ function startComment(id) {
                             <i class="fad fa-at"></i>
                         </div>
                     </section>
-                    <div class="post-btn comment-btn" onclick="sendComment('${id}', '${id}comment')">
+                    <div class="post-btn comment-btn" onclick="sendComment('${id}', 'comment${id}')">
                         <i class="fad fa-paper-plane"></i>
                     </div>
                 </div>
@@ -939,7 +1038,7 @@ function startComment(id) {
         post.insertAdjacentHTML('beforebegin', commentContainer)
     }
     const commentBG = `
-        <div class="ctx-background-blur tooltip-blur comment-blur" id="commentBG" onclick="closeComment(event, '${id}comment')"></div>
+        <div class="ctx-background-blur tooltip-blur comment-blur" id="commentBG" onclick="closeComment(event, 'comment${id}')"></div>
     `
     let commentWrapper = document.querySelectorAll('.ctx-comment-wrapper')
     commentWrapper.forEach(comment => {
@@ -1022,7 +1121,7 @@ function addCommentToDB(postID, startCommentID, thisUser, img, tag, ref) {
                     snapshot.docs.forEach(doc => {
                         let postID = doc.ref.parent.parent.id
                         if(doc.id == ref.id) {
-                            renderComment(doc, postID)
+                            renderComment(doc, `${postID}`)
                         }
                     })
                 })
@@ -1039,6 +1138,7 @@ function addCommentToDB(postID, startCommentID, thisUser, img, tag, ref) {
 }
 
 function renderComment(postInfo, postID) {
+    console.log("3")
     const post = document.querySelector(`#COMMENTCONTAINER${postID}`)
     const comment = `
         <div class="ctx-comment-wrapper" id="${postInfo.id}">
@@ -1053,23 +1153,23 @@ function renderComment(postInfo, postID) {
                     </div>
                     <div class="ctx-post-details">
                     ${(postInfo.data().commentByID == currentUser.uid)
-                        ?`<i class="far fa-ellipsis-h icon-clickable" id="ELLIPSES${postInfo.id}"></i>
-                            <div class="ctx-post-dropdown" style="display:none" id="COMMENTOPTIONS${postInfo.id}">
-                                <div class="ctx-dropdown-option">
-                                    <i class="fad fa-pencil" onclick="editComment('${postInfo.id}', '${postID}')"></i> Edit Comment
-                                </div>
-                                <div class="ctx-dropdown-option" onclick="deleteComment('${postInfo.id}', '${postID}')">
-                                    <i class="fad fa-trash"></i> Delete Comment
-                                </div>
-                            </div>`
-                        :`<i class="far fa-ellipsis-h icon-clickable" id="ELLIPSES${postInfo.id}"></i>
-                            <div class="ctx-post-dropdown" style="display:none" id="COMMENTOPTIONS${postInfo.id}">
-                                <div class="ctx-dropdown-option" onclick="reportComment('${postID}', '${postInfo.id}')">
-                                    <i class="fad fa-exclamation-circle"></i> Report Comment
-                                </div>
+                    ?`<i class="far fa-ellipsis-h icon-clickable" id="ELLIPSES${postInfo.id}"></i>
+                        <div class="ctx-post-dropdown" style="display:none" id="COMMENTOPTIONS${postInfo.id}">
+                            <div class="ctx-dropdown-option" onclick="editComment('${postInfo.id}', '${postID}')">
+                                <i class="fad fa-pencil"></i> Edit Comment
                             </div>
-                        `}
-                        <span style="font-weight:500;color:#555">${formatDate(postInfo.data().commentDate)}</span>
+                            <div class="ctx-dropdown-option" onclick="deleteComment('${postInfo.id}', '${postID}')">
+                                <i class="fad fa-trash"></i> Delete Comment
+                            </div>
+                        </div>`
+                    :`<i class="far fa-ellipsis-h icon-clickable" id="ELLIPSES${postInfo.id}"></i>
+                        <div class="ctx-post-dropdown" style="display:none" id="COMMENTOPTIONS${postInfo.id}">
+                            <div class="ctx-dropdown-option" onclick="reportComment('${postID}', '${postInfo.id}')">
+                                <i class="fad fa-exclamation-circle"></i> Report Comment
+                            </div>
+                        </div>
+                    `}
+                    <span style="font-weight:500;color:#555">${formatDate(postInfo.data().commentDate)}</span>
                     </div>
                 </div>
                 <div class="ctx-comment-body-container">
@@ -1105,17 +1205,17 @@ function renderComment(postInfo, postID) {
                 </div>
                 ${(postInfo.data().commentTag == "")?"":`<p class="add-tag">@${postInfo.data().commentTag}</p>`}
                 ${(postInfo.data().commentImage == true)
-                    ?`<!-- Post Image -->
-                        <div class="ctx-post-img" id="commentImgContainer${postInfo.id}">
-                            <div onclick="openLightbox('LIGHTBOX${postInfo.id}')">
-                                <div class="ctx-post-img-wrapper">
-                                    <img id="commentImg${postInfo.id}" src="">
-                                </div>
+                ?`<!-- Post Image -->
+                    <div class="ctx-post-img" id="commentImgContainer${postInfo.id}">
+                        <div onclick="openLightbox('LIGHTBOX${postInfo.id}')">
+                            <div class="ctx-post-img-wrapper">
+                                <img id="commentImg${postInfo.id}" src="">
                             </div>
                         </div>
-                        <div class="lightbox" onclick="closeLightbox(this.id)" id="LIGHTBOX${postInfo.id}"><img id="LIGHTBOXIMG${postInfo.id}" src=""></div>
-                    <!-- End Post Image -->`
-                    :""}
+                    </div>
+                    <div class="lightbox" onclick="closeLightbox(this.id)" id="LIGHTBOX${postInfo.id}"><img id="LIGHTBOXIMG${postInfo.id}" src=""></div>
+                <!-- End Post Image -->`
+                :""}
             </div>
         </div>
     `
@@ -1123,7 +1223,7 @@ function renderComment(postInfo, postID) {
     post.insertAdjacentHTML('beforeend', comment)
     
     // Handle opening menu for editing etc
-    document.querySelector(`#ELLIPSES${postInfo.id}`).addEventListener("click", (event) => { 
+    document.querySelector(`#ELLIPSES${postInfo.id}`).addEventListener("click", () => { 
         const comment = document.querySelector(`#COMMENTOPTIONS${postInfo.id}`)
         if (comment.style.display == "none") {
             comment.style.display = "flex"
@@ -1156,6 +1256,7 @@ function renderComment(postInfo, postID) {
                 }
             })
     }
+    return
 }
 
 // Delete an existing comment
@@ -1196,7 +1297,7 @@ function fetchComments(postID) {
         .get()
         .then(snapshot => {
             snapshot.docs.forEach(doc => {
-                renderComment(doc, postID)
+                renderComment(doc, `${postID}`)
             })
             getCommentCount(postID)
         })
@@ -1250,7 +1351,7 @@ function loadMoreComments(postID) {
         next.get()
             .then(snapshot => {
                 snapshot.docs.forEach(doc => {
-                    renderComment(doc, postID)
+                    renderComment(doc, `${postID}`)
                 })
             })
 
@@ -1377,15 +1478,36 @@ function hideTooltips(e) {
     })
 }
 
-function closeComment(e, commentID) {
+function closeComment(e, comment) {
     document.querySelector('body').removeChild(e.target)
     let commentWrapper = document.querySelectorAll('.ctx-comment-wrapper')
     commentWrapper.forEach(comment => {
         comment.style.zIndex = "inherit"
     })
     // Remove comment input container
-    let commentContainer = document.querySelector(`[id="${commentID}"]`)
+    let commentContainer = document.querySelector(`[id="${comment}"]`)
     if (commentContainer) {
         commentContainer.remove()
     }
+}
+
+function closeEditComment(e, comment, postID, commentID) {
+    document.querySelector('body').removeChild(e.target)
+    let commentWrapper = document.querySelectorAll('.ctx-comment-wrapper')
+    commentWrapper.forEach(comment => {
+        comment.style.zIndex = "inherit"
+    })
+    // Remove comment input container
+    let commentContainer = document.querySelector(`[id="${comment}"]`)
+    if (commentContainer) {
+        commentContainer.remove()
+    }
+    // Re-render Comment
+    posts.doc(`${postID}`)
+        .collection("comments")
+        .doc(`${commentID}`)
+        .get()
+        .then(item => {
+            renderComment(item, `${postID}`)
+        })
 }
