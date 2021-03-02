@@ -330,6 +330,7 @@ iframe {
 }
 
 .ctx-promo img {
+  display: block;
   width: 100%;
   height: auto;
   max-height: 100px;
@@ -539,7 +540,7 @@ iframe {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 100%;
-  padding: 15px 0 25px 0;
+  padding: 25px 0 25px 0;
   margin: 0 0 25px 0;
   border-bottom: solid 1px #ddd;
 }
@@ -877,10 +878,11 @@ iframe {
 }
 
 .ctx-post-img .ctx-post-img-wrapper img {
+  display: block;
   width: 100%;
   height: 100%;
   max-height: 260px;
-  margin: 20px 0 10px 0;
+  margin: 20px 0 0 0;
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -907,6 +909,7 @@ iframe {
 
 .ctx-profile-img {
   position: relative;
+  display: block;
   text-align: center;
   width: -webkit-min-content;
   width: -moz-min-content;
@@ -929,6 +932,7 @@ iframe {
 }
 
 .ctx-profile-img img {
+  display: block;
   width: 60px;
   height: 60px;
   border-radius: 100px;
@@ -943,6 +947,7 @@ iframe {
 }
 
 .ctx-profile-img .comment-img {
+  display: block;
   width: 50px;
   height: 50px;
   margin: 10px 0;
@@ -968,6 +973,7 @@ iframe {
   }
   .ctx-profile-img img {
     position: absolute;
+    display: block;
     width: 32px;
     height: 32px;
     z-index: 9;
@@ -979,6 +985,7 @@ iframe {
   }
   .ctx-profile-img .comment-img {
     position: relative;
+    display: block;
     width: 32px;
     height: 32px;
     left: 3px;
@@ -1629,6 +1636,7 @@ iframe {
 }
 
 .ctx-dash-header .ctx-dash-menu img {
+  display: block;
   width: 140px;
   height: auto;
   padding: 15px;
@@ -1708,6 +1716,7 @@ iframe {
     padding: 0 10px;
   }
   .ctx-dash-header .ctx-dash-menu img {
+    display: block;
     width: 100px;
   }
 }
@@ -2238,6 +2247,7 @@ button:hover {
 }
 
 .lightbox img {
+  display: block;
   max-width: 1100px;
   max-height: 800px;
   width: auto;
@@ -2281,6 +2291,7 @@ button:hover {
 
 @media (max-width: 1000px) {
   .lightbox img {
+    display: block;
     max-width: 100%;
   }
 }
@@ -2554,6 +2565,7 @@ button:hover {
 }
 
 .ctx-user-tagged img {
+  display: block;
   width: 25px;
   height: 25px;
   margin-right: 6px;
@@ -3187,6 +3199,7 @@ button:hover {
 
 .ctx-youtube-post {
   position: relative;
+  display: block;
   width: 100%;
   min-height: 320px;
   border: none;
