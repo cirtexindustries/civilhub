@@ -53,7 +53,7 @@ function startPostStatic() {
                 <div class="ctx-scroll-fade"></div>
             </div>
             <div class="ctx-post-categories">
-                <p style="margin-right:10px">Filter posts</p>
+                <p class="post-ordering">Post ordering</p>
                 <div class="ctx-dropdown-wrapper">
                     <select id="filterPostType">
                         <option value="postedDate">Newest First</option>
@@ -72,7 +72,7 @@ function startPostStatic() {
                     <img id="userPostProfileImg" src="public/img/default-user-icon.jpg">
                 </div>
                 <div class="ctx-post-content" onclick="renderCreatePost()">
-                <input maxlength="40" class="start-post ctx-post-inputs" type="text" placeholder="Start a discussion or ask a question">
+                <input maxlength="100" class="start-post ctx-post-inputs" type="text" placeholder="Start a discussion or ask a question">
                 </div>
             </div>
             `
@@ -122,6 +122,11 @@ const returnPostPic = async (doc) => {
     return await storage.ref(`posts/${doc.data().postedByID}/${doc.id}/postPic.jpg`).getDownloadURL()
 }
 
+// Return Pictures posted on Comments
+const returnCommentUpload = async (doc) => {
+    return await storage.ref(`comments/${doc.data().commentByID}/${doc.id}/commentPic.jpg`).getDownloadURL()
+}
+
 // Load posts
 function renderPost(doc, timePosted) {
     const postData = doc.data()
@@ -131,10 +136,12 @@ function renderPost(doc, timePosted) {
             <div class="ctx-post" id="${doc.id}">
                 <div class="ctx-profile-img">
                     <img id=${doc.id + 'profilepic'} src="public/img/default-user-icon.jpg">
-                    <div class="likesComments">
-                        <div><p><span id="likes${doc.id}">0</span> Upvotes</p></div>
-                        <div><p><span id="comments${doc.id}">0</span> Replies</p></div>
-                    </div>
+                    ${(screen.width > 900) 
+                        ?`<div class="likesComments">
+                            <div><p><span id="likes${doc.id}">0</span> Upvotes</p></div>
+                            <div><p><span id="comments${doc.id}">0</span> Replies</p></div>
+                        </div>`
+                        :""}
                 </div>
                 <div class="ctx-post-content" id=POSTBODY${doc.id}>
                     <div class="ctx-post-header">
@@ -156,7 +163,7 @@ function renderPost(doc, timePosted) {
                                 :`<i class="far fa-ellipsis-h icon-clickable" id="POSTELLIPSES${doc.id}"></i>
                                     <div class="ctx-post-dropdown" style="display:none" id="POSTOPTIONS${doc.id}">
                                         <div class="ctx-dropdown-option" onclick="reportPost('${doc.id}')">
-                                            <i class="fad fa-comment-alt-exclamation"></i> Report Post
+                                            <i class="fad fa-exclamation-circle"></i> Report Post
                                         </div>
                                     </div>
                                 `}
@@ -171,32 +178,34 @@ function renderPost(doc, timePosted) {
                                 input: postData.postContent,
                                 // use some options
                                 options: {
-                                attributes: {
-                                    target: "_blank",
-                                    class: "detected"
+                                    attributes: {
+                                        target: "_blank",
+                                        class: "detected"
+                                    },
+                                    truncate: 34,
+                                    middleTruncation: true,
+                                    specialTransform: [
+                                        {
+                                            test: /.*\.(png|jpg|gif)$/,
+                                            transform: s =>
+                                                `<img src="${s.startsWith("http://") ? s : `http://${s}`}">`
+                                        },
+                                        {
+                                            test: /youtube\.com\/watch\?v\=/,
+                                            transform: str =>
+                                                `<iframe class="ctx-youtube-post" src="https://www.youtube.com/embed/${str.replace(
+                                                    /.*watch\?v\=(.*)$/,
+                                                    "$1"
+                                                )}"></iframe>`
+                                        }
+                                    ]
                                 }
-                                },
-                                // and extensions
-                                extensions: [
-                                // an extension for hashtag search
-                                {
-                                    test: /#(\w|_)+/gi,
-                                    transform: string =>
-                                    `<a href="https://a.b?s=${string.substr(1)}">${string}</a>`
-                                },
-                                // an extension for mentions
-                                {
-                                    test: /@(\w|_)+/gi,
-                                    transform: string =>
-                                    `<a href="https://a.b/${string.substr(1)}">${string}</a>`
-                                }
-                                ]
                             })
                         }</p>
                         ${(postData.tagged != "")?`<p class="add-tag">@${postData.tagged}</p>`:""}
                     </div>
-                    ${(postData.postImg == true) ? 
-                    `<!-- Post Image -->
+                    ${(postData.postImg == true)
+                    ?`<!-- Post Image -->
                         <div class="ctx-post-img" id="postImgContainer${doc.id}">
                             <div onclick="openLightbox('LIGHTBOX${doc.id}')">
                                 <div class="ctx-post-img-wrapper">
@@ -206,9 +215,14 @@ function renderPost(doc, timePosted) {
                         </div>
                         <div class="lightbox" onclick="closeLightbox(this.id)" id="LIGHTBOX${doc.id}"><img id="LIGHTBOXIMG${doc.id}" src=""></div>
                     <!-- End Post Image -->`
-                    : ""
-                    }
+                    :""}
                     <div class="post-actions ctx-post-reactions">
+                        ${(screen.width < 900)
+                        ?`<div class="likesComments">
+                            <div><p><span id="likes${doc.id}">0</span> Upvotes</p></div>
+                            <div><p><span id="comments${doc.id}">0</span> Replies</p></div>
+                        </div>`
+                        :""}
                         <div class="likeComment">
                             <div onclick="startComment('${doc.id}')">
                             <i class="fad fa-comment-lines"></i> Reply to Post
@@ -230,6 +244,7 @@ function renderPost(doc, timePosted) {
         const comment = document.querySelector(`#POSTOPTIONS${doc.id}`)
         if (comment.style.display == "none") {
             comment.style.display = "flex"
+            showTooltips()
         } else {
             comment.style.display = "none"
         }
@@ -300,9 +315,9 @@ function renderCreatePost() {
                 <img id="userProfileImg" src="${document.querySelector('#uploadProfilePicture').src}">
             </div>
             <div class="ctx-post-content">
-                <input maxlength="40" class="start-post ctx-post-inputs" type="text" id="postTitle" autocomplete="off" placeholder="Enter a title or topic for this post">
+                <textarea maxlength="100" rows="1" oninput="autoGrow(this)" class="start-post ctx-post-inputs ctx-post-title" type="text" id="postTitle" autocomplete="off" placeholder="Enter a title, topic or question"></textarea>
                 <textarea maxlength="400" oninput="autoGrow(this)" class="start-post ctx-post-inputs" autocomplete="off" id="postContent" placeholder="What would you like to say?" contenteditable></textarea>
-                <input type="text" class="tag-post" autocomplete="off" onkeyup="searchTag(this.value)" id="tagging" placeholder="Type the name of someone to tag" style="display:none">
+                <input type="text" class="tag-post" autocomplete="off" onkeyup="searchTag(this.value, true)" id="tagging" placeholder="Type the name of someone to tag" style="display:none">
                 <div class="tag-popup" id="userTagPopup" style="display:none"></div>
                 <div class="ctx-post-img" style="display:none">
                     <div class="ctx-post-img-wrapper">
@@ -313,10 +328,10 @@ function renderCreatePost() {
                 <div class="post-actions likeComment post-creation">
                     <section class="ctx-post-options">
                         <div id="uploadPhoto" onclick="document.querySelector('#postUpload').click()">
-                            <i class="fad fa-image-polaroid"></i>&nbsp;Upload Photo
+                            <i class="fad fa-image-polaroid"></i>&nbsp; Photo
                         </div>
                         <div onclick="postTagging()">
-                            <i class="fad fa-at"></i>&nbsp;Tag Someone
+                            <i class="fad fa-at"></i>&nbsp;Tag
                         </div>
                     </section>
                     <div class="post-btn" onclick="sendPost()">
@@ -335,10 +350,10 @@ function renderCreatePost() {
 
 // Expand textarea fields when more lines are added
 function autoGrow(element) {
-    element.style.height = "10px"
+    element.style.height = "5px"
     element.style.height = (element.scrollHeight) + "px"
 
-    // Tagging in posts
+    /* Tagging in posts
 
     let content = element.value
     let tag = content.split(" ")
@@ -393,6 +408,7 @@ function autoGrow(element) {
             }
         }
     }
+    */
 }
 
 // Show preview of picture uploaded to posts
@@ -407,17 +423,44 @@ function postPicPreview() {
     document.querySelector('.ctx-post-img').style.display = "block"
 }
 
+// Show preview of picture uploaded to comments
+function commentPicPreview() {
+    const e = document.querySelector('#commentUploadIMG')
+    var output = document.querySelector('#commentPicPreview');
+    output.src = URL.createObjectURL(e.files[0]);
+    output.onload = function() {
+        URL.revokeObjectURL(output.src) // free memory
+    }
+    document.querySelector('#uploadPhotoComment').innerHTML = `<i class="fad fa-image-polaroid"></i>&nbsp;Change Photo`
+    document.querySelector('.ctx-comment-img').style.display = "block"
+}
+
 function postTagging() {
     const tagInput = document.querySelector('#tagging')
+    tagInput.style.display = "block"
+}
+
+function commentTagging() {
+    const tagInput = document.querySelector('#commentTagging')
     tagInput.style.display = "block"
 }
 
 let userTagged = ""
 
 // Search users, display tooltip of the user matching input
-function searchTag(value) {
-    const tagInput = document.querySelector('#tagging')
-    const tagPopup = document.querySelector('#userTagPopup')
+function searchTag(value, post) {
+
+    let tagInput
+    let tagPopup
+
+    if (post) {
+        tagInput = document.querySelector('#tagging')
+        tagPopup = document.querySelector('#userTagPopup')
+    } else {
+        tagInput = document.querySelector('#commentTagging')
+        tagPopup = document.querySelector('#userTagPopupComment')
+    }
+
 
     const tag = `
         <div class="ctx-user-tagged">
@@ -523,6 +566,7 @@ function addPostToDB(ref, doc, tag, cat, img) {
             posterID: doc.id,
             posterCompany: doc.data().company,
             likedBy: [],
+            likedCount: 0,
             tagged: tag,
             category: cat,
             postImg: img,
@@ -541,7 +585,7 @@ let industryCats = {
     cat_pavements: ["Pavements", "roading", "pavement", "pavements", "duragrid", "geogrid", "stratagrid", "geoter", "road", "asphalt", "tenax", "tenax 3d", "tenax3d", "gridtex"],
     cat_blockretaining: ["Block Retaining Systems", "allan", "block", "allanblock", "magnumstone", "magnum stone", "rocklok", "rocklock", "block retaining", "sleeveit", "sleeve it", "sleeve-it", "concrete block", "segmental", "gravity wall", "gravity system"],
     cat_srp: ["Sediment Retention Ponds", "sediment retention pond", "srp", "pond", "decant", "flocbox", "floc box", "flocshed", "floc", "floc shed", "portafloc", "porta floc", "dosing", "danline", "ctmp", "anti seep", "anti-seep", "pac", "chemical treatment", "polyaluminium", "dewatering", "decanting"],
-    cat_slopestability: ["Slope Stability", "slope stability", "anchors", "anchor", "platipus", "args", "civil anchors", "t-recs", "trecs", "platidrain", "plati-drain", "plati", "duramat", "shearlock", "shear lock", "rockfall"],
+    cat_slopestability: ["Slope Stability", "slope stability", "anchors", "anchor", "platipus", "args", "civil anchors", "t-recs", "trecs", "platidrain", "plati-drain", "plati", "duramat", "shearlock", "shear lock", "rockfall", "terratex"],
     cat_paving: ["Permeable Paving", "permeable", "paving", "surepave", "sure pave", "aluexcel", "sureflex", "sure flex", "porous", "grass protection"]
 }
 
@@ -697,7 +741,6 @@ function editSinglePost(postID) {
 
 // Render individual/single post
 function renderSinglePostEdit(post) {
-    console.log(post)
     const postData = post.data()
     const postContainer = `
         <div class="ctx-post ctx-new-post" id="newPost">
@@ -705,9 +748,9 @@ function renderSinglePostEdit(post) {
                 <img id="userProfileImg" src="">
             </div>
             <div class="ctx-post-content">
-                <input maxlength="40" class="start-post ctx-post-inputs" type="text" id="postTitle" autocomplete="off" placeholder="Enter a title or topic for this post" value="${postData.postTitle}">
+                <input maxlength="100" class="start-post ctx-post-inputs" type="text" id="postTitle" autocomplete="off" placeholder="Enter a title or topic for this post" value="${postData.postTitle}">
                 <textarea maxlength="400" oninput="autoGrow(this)" class="start-post ctx-post-inputs" autocomplete="off" id="postContent" placeholder="What would you like to say?" contenteditable>${postData.postContent}</textarea>
-                <input type="text" class="tag-post" autocomplete="off" onkeyup="searchTag(this.value)" id="tagging" placeholder="Type the name of someone to tag" style="display:none">
+                <input type="text" class="tag-post" autocomplete="off" onkeyup="searchTag(this.value, true)" id="tagging" placeholder="Type the name of someone to tag" style="display:none">
                 <div class="tag-popup" id="userTagPopup" style="display:none"></div>
                 <div class="ctx-post-img" style="display:none">
                     <div class="ctx-post-img-wrapper">
@@ -718,10 +761,10 @@ function renderSinglePostEdit(post) {
                 <div class="post-actions likeComment post-creation">
                     <section class="ctx-post-options">
                         <div id="uploadPhoto" onclick="document.querySelector('#postUpload').click()">
-                            <i class="fad fa-image-polaroid"></i>&nbsp;Upload Photo
+                            <i class="fad fa-image-polaroid"></i>&nbsp; Photo
                         </div>
                         <div onclick="postTagging()">
-                            <i class="fad fa-at"></i>&nbsp;Tag Someone
+                            <i class="fad fa-at"></i>&nbsp;Tag
                         </div>
                     </section>
                     <div class="post-btn" onclick="updatePost('${post.id}')">
@@ -800,7 +843,6 @@ function removeCreatePost() {
 
 // Deletes an existing post & it's comments, add's loading spinner while it processes
 function deletePost(postID) {
-    //document.querySelector(`[id='${postID}']`).className = "fad fa-spinner fa-spin"
     posts.doc(`${postID.id}`)
         .get()
         .then(result => {
@@ -822,6 +864,7 @@ function deletePost(postID) {
                             const container = document.querySelector('#posts')
                             const post = document.querySelector(`[id="POST${postID.id}"]`)
                             container.removeChild(post)
+                            document.querySelector('body').removeChild(document.querySelector('.tooltip-blur'))
                             alert("Your post has been deleted.", "Success!")
                     })
                     // Delete any associated post image
@@ -858,24 +901,55 @@ function deletePost(postID) {
 function startComment(id) {
     if (document.getElementById(`#${id}comment`) == null) {
         const post = document.querySelector(`#COMMENTCONTAINER${id}`)
-        const commentContainer =`
+        const commentContainer = `
         <div class="ctx-comment-wrapper" id="${id}comment">
-            <div class="ctx-comment-wrapper ctx-comment-content ctx-start-comment" style="flex-direction: row;">
-                <textarea maxlength="400" oninput="autoGrow(this)" class="start-post" id="commentContent${id}" placeholder="What would you like to say?" contenteditable></textarea>
-                <div class="tag-popup" id="postUserTagPopup" style="display:none"></div>
-                <div class="ctx-comment-post">
-                    <div class="post-btn" onclick="sendComment('${id}', '${id}comment')">
-                    <i class="fad fa-paper-plane"></i>
-                    </div>
-                </div>
-            </div>
             <div class="ctx-profile-img">
                 <img class="ctx-profile-img img comment-img" src="${document.querySelector('#uploadProfilePicture').src}">
+            </div>
+            <div class="ctx-comment-wrapper ctx-comment-content ctx-start-comment">
+                <textarea maxlength="400" oninput="autoGrow(this)" class="start-post" id="commentContent${id}" placeholder="What would you like to say?" contenteditable></textarea>
+                <div class="tag-popup" id="postUserTagPopup" style="display:none"></div>
+
+                <input type="text" class="tag-post tag-comment" autocomplete="off" onkeyup="searchTag(this.value, false)" id="commentTagging" placeholder="Type the name of someone to tag" style="display:none">
+                <div class="tag-popup tag-popup-comment" id="userTagPopupComment" style="display:none"></div>
+                
+                <div class="ctx-post-img ctx-comment-img" style="display:none">
+                    <div class="ctx-post-img-wrapper">
+                        <img id="commentPicPreview">
+                    </div>
+                </div>
+
+                <input onchange="commentPicPreview()" style="display:none" id="commentUploadIMG" type="file">
+                <div class="post-actions likeComment post-creation comment-creation">
+                    <section class="ctx-post-options">
+                        <div id="uploadPhotoComment" onclick="document.querySelector('#commentUploadIMG').click()">
+                            <i class="fad fa-image-polaroid"></i>
+                        </div>
+                        <div onclick="commentTagging()">
+                            <i class="fad fa-at"></i>
+                        </div>
+                    </section>
+                    <div class="post-btn comment-btn" onclick="sendComment('${id}', '${id}comment')">
+                        <i class="fad fa-paper-plane"></i>
+                    </div>
+                </div>
+
             </div>
         </div>`
         post.insertAdjacentHTML('beforebegin', commentContainer)
     }
+    const commentBG = `
+        <div class="ctx-background-blur tooltip-blur comment-blur" id="commentBG" onclick="closeComment(event, '${id}comment')"></div>
+    `
+    let commentWrapper = document.querySelectorAll('.ctx-comment-wrapper')
+    commentWrapper.forEach(comment => {
+        comment.style.zIndex = "12"
+    })
+    document.querySelector('body').insertAdjacentHTML('afterbegin', commentBG)
 }
+
+// Store the uploaded file into object
+let commentFile = {}
 
 // Send comment to DB
 function sendComment(postID, startCommentID) {
@@ -889,37 +963,78 @@ function sendComment(postID, startCommentID) {
                     let ref = posts.doc()
                         .collection("comments")
                         .doc()
-                    // Set reference for Comment
-                    posts.doc(postID)
-                        .collection("comments")
-                        .doc(`${ref.id}`)
-                        .set({
-                            comment: document.querySelector(`#commentContent${postID}`).value,
-                            commentBy: `${thisUser.fname} ${thisUser.lname}`,
-                            commentByCompany: `${thisUser.company}`,
-                            commentDate: new Date().getTime() / 1000,
-                            commentByID: currentUser.uid
-                        })
-                    // Add 1 to comment count
-                    let currentComments = document.querySelector(`#comments${postID}`).innerHTML
-                    document.querySelector(`#comments${postID}`).innerHTML = parseInt(currentComments) + 1
-                    // Remove comment input container
-                    document.querySelector(`[id="${startCommentID}"]`).remove()
-
-                    posts.doc(postID)
-                        .collection("comments")
-                        .orderBy("commentDate", "desc")
-                        .get()
-                        .then(snapshot => {
-                            snapshot.docs.forEach(doc => {
-                                let postID = doc.ref.parent.parent.id
-                                if(doc.id == ref.id) {
-                                    renderComment(doc, postID)
-                                }
+                    let tag = ""
+                    if (document.querySelector('#commentTagging').value != "") {
+                        tag = document.querySelector('#commentTagging').value
+                        posts.doc(postID)
+                            .get()
+                            .then((post) => {
+                                sendTagNotification(userTagged, post.id, currentUser)
                             })
-                        })
+                    }
+                    img = false
+                    commentFile = document.querySelector('#commentUploadIMG').files[0]
+                    if (commentFile) { // CREATE POST WITH PHOTO
+                        if (commentFile.size < 2097152) {
+                            // Get the uploaded file and add to firebse under posts / user ID / post ID
+                            storage.ref(`comments/${currentUser.uid}/${ref.id}/commentPic.jpg`)
+                                .put(commentFile)
+                                .then(() => {
+                                    img = true
+                                    addCommentToDB(postID, startCommentID, thisUser, img, tag, ref)
+                                })
+                        } else {
+                            alert("File is too big! Image must be less than 2MB. Try uploading a different image.", "Error!");
+                        }
+                    } else { // CREATE POST WITHOUT PHOTO
+                        addCommentToDB(postID, startCommentID, thisUser, img, tag, ref)
+                    }
                 }
             })
+        })
+}
+
+function addCommentToDB(postID, startCommentID, thisUser, img, tag, ref) {
+    posts.doc(postID)
+        .collection("comments")
+        .doc(`${ref.id}`)
+        .set({
+            comment: document.querySelector(`#commentContent${postID}`).value,
+            commentBy: `${thisUser.fname} ${thisUser.lname}`,
+            commentByCompany: `${thisUser.company}`,
+            commentDate: new Date().getTime() / 1000,
+            commentByID: currentUser.uid,
+            commentImage: img,
+            commentTag: tag
+        }).then(() => {
+            // Add 1 to comment count
+            let currentComments = document.querySelector(`#comments${postID}`).innerHTML
+            document.querySelector(`#comments${postID}`).innerHTML = parseInt(currentComments) + 1
+
+            // Remove comment input container
+            document.querySelector(`[id="${startCommentID}"]`).remove()
+
+            posts.doc(postID)
+                .collection("comments")
+                .orderBy("commentDate", "desc")
+                .get()
+                .then(snapshot => {
+                    snapshot.docs.forEach(doc => {
+                        let postID = doc.ref.parent.parent.id
+                        if(doc.id == ref.id) {
+                            renderComment(doc, postID)
+                        }
+                    })
+                })
+                
+            document.querySelector('#commentBG').click()
+
+            // Remove "Load more comments" button
+            let post = document.querySelector(`#COMMENTCONTAINER${postID}`)
+            let loadCommentsBtn = document.querySelector(`#loadComments${postID}`)
+            post.removeChild(loadCommentsBtn)
+
+            getCommentCount(postID)
         })
 }
 
@@ -936,12 +1051,12 @@ function renderComment(postInfo, postID) {
                         <span style="font-weight:bold">${postInfo.data().commentBy}</span>
                         <span>${postInfo.data().commentByCompany}</span>
                     </div>
-                    <div>
+                    <div class="ctx-post-details">
                     ${(postInfo.data().commentByID == currentUser.uid)
                         ?`<i class="far fa-ellipsis-h icon-clickable" id="ELLIPSES${postInfo.id}"></i>
                             <div class="ctx-post-dropdown" style="display:none" id="COMMENTOPTIONS${postInfo.id}">
                                 <div class="ctx-dropdown-option">
-                                    <i class="fad fa-pencil"></i> Edit Comment
+                                    <i class="fad fa-pencil" onclick="editComment('${postInfo.id}', '${postID}')"></i> Edit Comment
                                 </div>
                                 <div class="ctx-dropdown-option" onclick="deleteComment('${postInfo.id}', '${postID}')">
                                     <i class="fad fa-trash"></i> Delete Comment
@@ -950,46 +1065,61 @@ function renderComment(postInfo, postID) {
                         :`<i class="far fa-ellipsis-h icon-clickable" id="ELLIPSES${postInfo.id}"></i>
                             <div class="ctx-post-dropdown" style="display:none" id="COMMENTOPTIONS${postInfo.id}">
                                 <div class="ctx-dropdown-option" onclick="reportComment('${postID}', '${postInfo.id}')">
-                                    <i class="fad fa-comment-alt-exclamation"></i> Report Comment
+                                    <i class="fad fa-exclamation-circle"></i> Report Comment
                                 </div>
                             </div>
                         `}
                         <span style="font-weight:500;color:#555">${formatDate(postInfo.data().commentDate)}</span>
                     </div>
                 </div>
-                <div style="margin-top:10px">
+                <div class="ctx-comment-body-container">
                     <p>${ // Detect URLs in comment content
                         anchorme({
                             input: postInfo.data().comment,
                             // use some options
                             options: {
-                            attributes: {
-                                target: "_blank",
-                                class: "detected"
+                                attributes: {
+                                    target: "_blank",
+                                    class: "detected"
+                                },
+                                truncate: 32,
+                                middleTruncation: true,
+                                specialTransform: [
+                                    {
+                                        test: /.*\.(png|jpg|gif)$/,
+                                        transform: s =>
+                                            `<img src="${s.startsWith("http://") ? s : `http://${s}`}">`
+                                    },
+                                    {
+                                        test: /youtube\.com\/watch\?v\=/,
+                                        transform: str =>
+                                            `<iframe class="ctx-youtube-comment" src="https://www.youtube.com/embed/${str.replace(
+                                                /.*watch\?v\=(.*)$/,
+                                                "$1"
+                                            )}"></iframe>`
+                                    }
+                                ]
                             }
-                            },
-                            // and extensions
-                            extensions: [
-                            // an extension for hashtag search
-                            {
-                                test: /#(\w|_)+/gi,
-                                transform: string =>
-                                `<a href="https://a.b?s=${string.substr(1)}">${string}</a>`
-                            },
-                            // an extension for mentions
-                            {
-                                test: /@(\w|_)+/gi,
-                                transform: string =>
-                                `<a href="https://a.b/${string.substr(1)}">${string}</a>`
-                            }
-                            ]
                         })
                     }</p>
                 </div>
+                ${(postInfo.data().commentTag == "")?"":`<p class="add-tag">@${postInfo.data().commentTag}</p>`}
+                ${(postInfo.data().commentImage == true)
+                    ?`<!-- Post Image -->
+                        <div class="ctx-post-img" id="commentImgContainer${postInfo.id}">
+                            <div onclick="openLightbox('LIGHTBOX${postInfo.id}')">
+                                <div class="ctx-post-img-wrapper">
+                                    <img id="commentImg${postInfo.id}" src="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lightbox" onclick="closeLightbox(this.id)" id="LIGHTBOX${postInfo.id}"><img id="LIGHTBOXIMG${postInfo.id}" src=""></div>
+                    <!-- End Post Image -->`
+                    :""}
             </div>
         </div>
     `
-
+    
     post.insertAdjacentHTML('beforeend', comment)
     
     // Handle opening menu for editing etc
@@ -997,6 +1127,7 @@ function renderComment(postInfo, postID) {
         const comment = document.querySelector(`#COMMENTOPTIONS${postInfo.id}`)
         if (comment.style.display == "none") {
             comment.style.display = "flex"
+            showTooltips()
         } else {
             comment.style.display = "none"
         }
@@ -1011,12 +1142,24 @@ function renderComment(postInfo, postID) {
         }).catch(() => {
             profilePic.src = `public/img/default-user-icon.jpg`
         })
+
+
+    // Get post images
+    if (postInfo.data().commentImage) {
+        document.querySelector(`#commentImg${postInfo.id}`).src = `public/img/blank.jpg`
+        returnCommentUpload(postInfo)
+            .then((value) => {
+                if(value) {
+                    document.querySelector(`#commentImgContainer${postInfo.id}`).style.display = "block"
+                    document.querySelector(`#commentImg${postInfo.id}`).src = value
+                    document.querySelector(`#LIGHTBOXIMG${postInfo.id}`).src = value
+                }
+            })
+    }
 }
 
 // Delete an existing comment
 function deleteComment(commentID, postID) {
-    // Add loading spinner
-    //document.querySelector(`[id="${commentID}"]`).className = "fad fa-spinner fa-spin"
     posts.get()
         .then(snapshot => {
             snapshot.docs.forEach(doc => {
@@ -1026,11 +1169,18 @@ function deleteComment(commentID, postID) {
                     .delete()
                     .then(() => {
                         // Remove the comment from front end
-                        document.querySelector(`[id="${commentID}"]`).parentElement.remove()
+                        document.querySelector(`[id="${commentID}"]`).remove()
                         // Minus 1 to comment count
                         let currentComments = document.querySelector(`#comments${postID}`).innerHTML
                         document.querySelector(`#comments${postID}`).innerHTML = parseInt(currentComments) - 1
+                        document.querySelector('body').removeChild(document.querySelector('.tooltip-blur'))
                         alert("Your comment has been deleted.", "Success!")
+
+                        // Delete any associated post image
+                        storage.ref()
+                        .child(`comments/${currentUser.uid}/${commentID}/commentPic.jpg`)
+                        .delete()
+                        .then(() => {})
                         return;
                 })
             })
@@ -1150,38 +1300,31 @@ function formatDate(postedDate) {
 
 // Likes a post
 function likePost(id, e) {
-    posts.get(id)
-        .then((snapshot) => {
-            snapshot.docs.forEach(doc => {
-                if(doc.id == id) {
-                    posts.doc(doc.id)
-                        .get()
-                        .then(result => {
-                            if(!result.data().likedBy.includes(currentUser.email)) { // Like Post
-                                e.target.innerHTML = `<i style="color:#e31936" class="fad fa-thumbs-up"></i> Upvoted`
-                                posts.doc(result.id).update({
-                                    likedBy: firebase.firestore.FieldValue.arrayUnion(currentUser.email)
-                                })
-                                let currentLikes = document.querySelector(`[id='likes${doc.id}']`).innerHTML
-                                document.querySelector(`[id='likes${doc.id}']`).innerHTML = parseInt(parseInt(currentLikes) + 1)
-                            } else { // Unlike Post
-                                e.target.innerHTML = `<i class="fad fa-thumbs-up"></i> Upvote Post`
-                                posts.doc(result.id).update({
-                                    likedBy: firebase.firestore.FieldValue.arrayRemove(currentUser.email)
-                                })
-                                let currentLikes = document.querySelector(`[id='likes${doc.id}']`).innerHTML
-                                document.querySelector(`[id='likes${doc.id}']`).innerHTML = parseInt(parseInt(currentLikes) - 1)
-                            }
-                        })
-                }
-            })
+    posts.doc(`${id}`)
+        .get()
+        .then(result => {
+            if(!result.data().likedBy.includes(currentUser.email)) { // Like Post
+                e.target.innerHTML = `<i style="color:#e31936" class="fad fa-thumbs-up"></i> Upvoted`
+                posts.doc(result.id).update({
+                    likedBy: firebase.firestore.FieldValue.arrayUnion(currentUser.email)
+                })
+                let currentLikes = document.querySelector(`[id='likes${id}']`).innerHTML
+                document.querySelector(`[id='likes${id}']`).innerHTML = parseInt(parseInt(currentLikes) + 1)
+            } else { // Unlike Post
+                e.target.innerHTML = `<i class="fad fa-thumbs-up"></i> Upvote Post`
+                posts.doc(result.id).update({
+                    likedBy: firebase.firestore.FieldValue.arrayRemove(currentUser.email)
+                })
+                let currentLikes = document.querySelector(`[id='likes${id}']`).innerHTML
+                document.querySelector(`[id='likes${id}']`).innerHTML = parseInt(parseInt(currentLikes) - 1)
+            }
         })
 }
 
 function reportComment(postID, commentID) {
     document.querySelector(`#COMMENTOPTIONS${commentID}`).innerHTML = `<i class="fad fa-spinner fa-spin"></i>`
     Email.send({
-        SecureToken : "ff27d002-dfcb-44ee-a21b-d3fbb0963431",
+        SecureToken : "e6ab7043-8101-41a5-a43e-abfadac04ca7",
         To : 'andrew.landes@cirtex.co.nz',
         From : "andrew.landes@cirtex.co.nz",
         Subject : "New Comment Report - Civil Hub",
@@ -1191,7 +1334,8 @@ function reportComment(postID, commentID) {
     }).then(
     message => {
         alert("Thanks, this post has been reported.", "Success!")
-        document.querySelector(`#COMMENTOPTIONS${commentID}`).innerHTML = ``
+        document.querySelector(`#COMMENTOPTIONS${commentID}`).innerHTML = `<span>This post has been reported.</span>`
+        document.querySelector('body').removeChild(document.querySelector('.tooltip-blur'))
         setTimeout(() => {
             document.querySelector(`#COMMENTOPTIONS${commentID}`).style.display = "none"
         }, 2000);
@@ -1201,7 +1345,7 @@ function reportComment(postID, commentID) {
 function reportPost(postID) {
     document.querySelector(`#POSTOPTIONS${postID}`).innerHTML = `<i class="fad fa-spinner fa-spin"></i>`
     Email.send({
-        SecureToken : "ff27d002-dfcb-44ee-a21b-d3fbb0963431",
+        SecureToken : "e6ab7043-8101-41a5-a43e-abfadac04ca7",
         To : 'andrew.landes@cirtex.co.nz',
         From : "andrew.landes@cirtex.co.nz",
         Subject : "New Post Report - Civil Hub",
@@ -1210,9 +1354,38 @@ function reportPost(postID) {
     }).then(
     message => {
         alert("Thanks, this post has been reported.", "Success!")
-        document.querySelector(`#POSTOPTIONS${postID}`).innerHTML = ``
+        document.querySelector(`#POSTOPTIONS${postID}`).innerHTML = `<span>This post has been reported.</span>`
+        document.querySelector('body').removeChild(document.querySelector('.tooltip-blur'))
         setTimeout(() => {
             document.querySelector(`#POSTOPTIONS${postID}`).style.display = "none"
         }, 2000);
     })
+}
+
+function showTooltips() {
+    const tooltipBG = `
+        <div class="ctx-background-blur tooltip-blur" onmousedown="hideTooltips(event)"></div>
+    `
+    document.querySelector('body').insertAdjacentHTML('afterbegin', tooltipBG)
+}
+
+function hideTooltips(e) {
+    document.querySelector('body').removeChild(e.target)
+    let tooltips = document.querySelectorAll('.ctx-post-dropdown')
+    tooltips.forEach(tooltip => {
+        tooltip.style.display = "none"
+    })
+}
+
+function closeComment(e, commentID) {
+    document.querySelector('body').removeChild(e.target)
+    let commentWrapper = document.querySelectorAll('.ctx-comment-wrapper')
+    commentWrapper.forEach(comment => {
+        comment.style.zIndex = "inherit"
+    })
+    // Remove comment input container
+    let commentContainer = document.querySelector(`[id="${commentID}"]`)
+    if (commentContainer) {
+        commentContainer.remove()
+    }
 }

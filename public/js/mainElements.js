@@ -5,11 +5,15 @@ let rightColumn = `
   </div>
   <div class="ctx-dash-body">
     <div class="ctx-dash-welcome">
-        <div class="ctx-profile-img update-profile">
-            <img id="uploadProfilePicture" class="dashboard-profile-pic" src="public/img/default-user-icon.jpg">
-            <input type="file" onchange="chooseProfilePic(event)" id="updateProfilePicture" style="display:none">
-        </div>
-        <p><span id="welcomeMessage">Good afternoon</span>,<br><b id="welcomeUsername">Andrew</b></p>
+      <div class="ctx-popup-tip">
+        <div class="ctx-popup-close" onclick="closePopup()"><i class="fal fa-times"></i></div>
+        <span id="profilePicToolTip">Click here to update your profile picture!</span>
+      </div>
+      <div class="ctx-profile-img update-profile">
+          <img id="uploadProfilePicture" class="dashboard-profile-pic" src="public/img/default-user-icon.jpg">
+          <input type="file" onchange="chooseProfilePic(event)" id="updateProfilePicture" style="display:none">
+      </div>
+      <p><span id="welcomeMessage">Good afternoon</span>,<br><b id="welcomeUsername">Andrew</b></p>
     </div>
     <div id="notificationContainer"></div>
   </div>
@@ -67,7 +71,7 @@ const renderMenu = `
         <li onclick='window.location.href = "downloads.html"'><i class="fad fa-book"></i> Technical Documents</li>
     </ul>
     <br>
-    <span class="ctx-version">Beta Version 0.7 | <a href="mailto:andrew.landes@cirtex.co.nz">Report a Bug</a></span>
+    <span class="ctx-version">Beta Version 0.92 | <a href="mailto:andrew.landes@cirtex.co.nz">Report a Bug</a></span>
     <span class="ctx-version">Powered by Cirtex®</span>
     `
 document.querySelector('#menu').insertAdjacentHTML('beforeend', renderMenu)
@@ -159,6 +163,50 @@ function sendTagNotification(taggedEmail, postID, user) {
                       postID: postID,
                       dateTime: new Date().getTime() / 1000,
                       read: false
+                  }).then(() => {
+                    Email.send({
+                      Host : "smtp.office365.com",
+                      Username : "andrew.landes@cirtex.co.nz",
+                      Password : "CirMAS885",
+                      To : taggedEmail,
+                      From : "andrew.landes@cirtex.co.nz",
+                      Subject : "You've been tagged in a post | Civil Hub",
+                      Body : 
+                      `<center>
+                      <br>
+                      <table border="0" cellpadding="0" cellspacing="0" style="background:#f2f2f2;margin:5%;padding:5%;border-radius:10px;width:80%;border-spacing:0;">
+                          <tr>
+                              <td>
+                                <img style="max-width:96px;max-height:32.125px" src="http://civilhub.co.nz/public/img/civilhub-logo-email.png" width="96px" height="32.125px">
+                                <br><br>
+                                ${user.displayName} has tagged you in a post on the Civil Hub.
+                                <br><br>
+                                  <table border="0" cellspacing="0" cellpadding="0">
+                                    <tr style="padding: 12px 18px;text-decoration: none;">
+                                      <td align="center" style="border-radius: 3px" bgcolor="#e80032">
+                                      <a href="https://civilhub.co.nz" target="_blank" style="
+                                      font-size: 16px;
+                                      font-family: Helvetica, Arial, sans-serif;
+                                      color: #ffffff;
+                                      text-decoration: none;
+                                      border-radius: 3px;
+                                      padding: 12px 18px;
+                                      border: none;
+                                      display: inline-block;">View the post on Civil Hub &rarr;</a>
+                                    </tr>
+                                  </table>
+                              </td>
+                          </tr>
+                      </table>
+                      <br>
+                      <a href="#" target="_blank" style="font-size:12px!important;color:#aaa;text-decoration:none;">Unsubscribe from notification emails</a>
+                      <p style="font-size:12px;margin:0;">© Civil Hub 2021 | Powered by Cirtex</p>
+                    </center>`
+                    }).then(
+                    message => {
+                      console.log(message)
+                      console.log(taggedEmail)
+                    })
                   })
             }
         })
@@ -192,7 +240,7 @@ function getNotifications() {
 function renderNotification(taggedBy, originalPost, id) {
   let notification = `
       <div id="NOTIFICATION${id}" class="notification" onclick="goToNotification('${originalPost}', '${id}')">
-          <i class="fal fa-bell"></i>
+        <i class="fad fa-bell-on"></i>
           <p><strong>${taggedBy}</strong> mentioned you in a post. Click to view.</p>
       </div>
       `
@@ -229,6 +277,7 @@ function clearNotification(post, id) {
 }
 
 function alert(message, title) {
+  const dashboard = document.querySelector('body')
     const alert = `
       <div class="ctx-alert" id="alert">
         <div class="ctx-alert-body">
@@ -237,15 +286,29 @@ function alert(message, title) {
         </div>
       </div>
     `
-    document.querySelector('#ctxDashboard').insertAdjacentHTML('beforeend', alert)
+    
+    if (document.querySelector('#alert')) {
+      let alertBox = document.querySelector('#alert')
+      while (alertBox.firstChild) {
+        alertBox.removeChild(alertBox.firstChild)
+      }
+      dashboard.removeChild(alertBox)
+    }
+
+    dashboard.insertAdjacentHTML('beforeend', alert)
+
     let alertBox = document.querySelector('#alert')
     setTimeout(() => {
-      alertBox.style.animation = "fadeOut ease 1s"
+      alertBox.style.animation = "fadeOut ease 1.2s"
       setTimeout(() => {
         while (alertBox.firstChild) {
           alertBox.removeChild(alertBox.firstChild)
         }
-        document.querySelector('#ctxDashboard').removeChild(alertBox)
+        dashboard.removeChild(alertBox)
       }, 1000)
     }, 5000)
+}
+
+function closePopup() {
+  document.querySelector('.ctx-popup-tip').style.display = "none"
 }

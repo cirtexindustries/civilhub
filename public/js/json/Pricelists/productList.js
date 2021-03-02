@@ -1265,7 +1265,7 @@ const bp2 = { //BP2 Prices
             "price": 750
         },
         "CTMP Sample": {
-            "name": "CTMP Saple Collection & Testing Fee",
+            "name": "CTMP Sample Collection & Testing Fee",
             "range": "",
             "type": "Services",
             "size": "",
@@ -1395,6 +1395,872 @@ const bp2 = { //BP2 Prices
             "unit": "Roll",
             "url": "https://cirtexcivil.co.nz/product/danline/",
             "price": 43.8
+        }
+    },
+    "Drain Filters": {
+        "Cesspit Filter Bag with Frame": {
+            "name": "Cesspit Filter Bag with Frame",
+            "range": "",
+            "type": "",
+            "size": "655mm x 450mm",
+            "code": "13196",
+            "unit": "Kit",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 234.9
+        },
+        "Cesspit Filter Bag Only": {
+            "name": "Cesspit Filter Bag Only",
+            "range": "",
+            "type": "",
+            "size": "655mm x 450mm",
+            "code": "13197",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 140.32
+        },
+        "Cesspit Filter Frame Only": {
+            "name": "Cesspit Filter Frame Only",
+            "range": "",
+            "type": "",
+            "size": "655mm x 450mm",
+            "code": "13437",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 97.58
+        },
+        "Cesspit Filter Dam with Foam Border": {
+            "name": "Cesspit Filter Dam with Foam Border",
+            "range": "",
+            "type": "Cesspit Filter",
+            "size": "",
+            "code": "13437",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 153.55
+        },
+        "Filter Pod Catchpit Filter": {
+            "name": "Filter Pod Catchpit Filter",
+            "range": "",
+            "type": "Filter Pod",
+            "size": "",
+            "code": "76399",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/filter-pods-catch-pit-filter/",
+            "price": 69.96
+        },
+        "Filter Pod Catchpit Filter with Foam Seal": {
+            "name": "Filter Pod Catchpit Filter with Foam Seal",
+            "range": "",
+            "type": "Filter Pod",
+            "size": "",
+            "code": "76779",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/filter-pods-catch-pit-filter/",
+            "price": 80.72
+        }
+    },
+    "Silt Socks": {
+        "Silt Sock Sawdust Filled": {
+            "name": "Silt Sock Sawdust Filled",
+            "range": "",
+            "type": "Filled",
+            "size": "225mm x 3m",
+            "code": "76662",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 49.95
+        },
+        "Silt Sock Sawdust Filled": {
+            "name": "Silt Sock Bark Filled",
+            "range": "",
+            "type": "Filled",
+            "size": "150mm x 2m",
+            "code": "13200",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 26.90
+        },
+        "Silt Sock Unfilled Green 1m": {
+            "name": "Silt Sock Unfilled Green",
+            "range": "",
+            "type": "Unfilled",
+            "size": "150mm x 1m",
+            "code": "76029",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 4.83
+        },
+        "Silt Sock Unfilled Green 2m": {
+            "name": "Silt Sock Unfilled Green",
+            "range": "",
+            "type": "Unfilled",
+            "size": "150mm x 2m",
+            "code": "13278",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 7.85
+        },
+        "Silt Sock Unfilled Green 3m": {
+            "name": "Silt Sock Unfilled Green",
+            "range": "",
+            "type": "Unfilled",
+            "size": "150mm x 3m",
+            "code": "13279",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 11.9
+        },
+        "Filter Sock Black 200mm": {
+            "name": "Filter Sock Black",
+            "range": "",
+            "type": "Filter Sock",
+            "size": "200mm x 50m",
+            "code": "76719",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 131.9
+        },
+        "Filter Sock Black 250mm": {
+            "name": "Filter Sock Black",
+            "range": "",
+            "type": "Filter Sock",
+            "size": "250mm x 50m",
+            "code": "76738",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 136.2
+        },
+        "EnviroHEMP Spill Kit": {
+            "name": "EnviroHEMP Spill Kit",
+            "range": "",
+            "type": "EnviroHEMP",
+            "size": "240L",
+            "code": "56030",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirohemp-spill-kit/",
+            "price": 419.8
+        }
+    },
+    "Signal Spray Paint": {
+        "Signal Spray Paint Fluro Blue": {
+            "name": "Signal Spray Paint Fluro Blue",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13149",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 4.29
+        },
+        "Signal Spray Paint Fluro Green": {
+            "name": "Signal Spray Paint Fluro Green",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13150",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 4.29
+        },
+        "Signal Spray Paint Fluro Orange": {
+            "name": "Signal Spray Paint Fluro Orange",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13151",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 4.29
+        },
+        "Signal Spray Paint Fluro Pink": {
+            "name": "Signal Spray Paint Fluro Pink",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13152",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 4.29
+        },
+        "Signal Spray Paint Fluro Purple": {
+            "name": "Signal Spray Paint Fluro Purple",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13153",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 4.29
+        },
+        "Signal Spray Paint Fluro Red": {
+            "name": "Signal Spray Paint Fluro Red",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13154",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 4.29
+        },
+        "Signal Spray Paint Fluro Yellow": {
+            "name": "Signal Spray Paint Fluro Yellow",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13155",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 4.29
+        },
+        "Signal Spray Paint White": {
+            "name": "Signal Spray Paint White",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13156",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 4.29
+        },
+        "Signal Spray Wand 600mm": {
+            "name": "Signal Spray Wand",
+            "range": "",
+            "type": "",
+            "size": "600mm",
+            "code": "13482",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 109.39
+        },
+        "Signal Spray Wand 700mm": {
+            "name": "Signal Spray Wand",
+            "range": "",
+            "type": "",
+            "size": "700mm",
+            "code": "13483",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 109.39
+        }
+    },
+    "EnviroSieve Floating Turbidity Curtains": {
+        "EnviroSieve Floating Turbidity Curtain": {
+            "name": "EnviroSieve Floating Turbidity Curtain",
+            "range": "",
+            "type": "",
+            "size": "2m x 25m",
+            "code": "76715",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-turbidity-curtain/",
+            "price": 2228.3
+        },
+        "EnviroSieve Floating Turbidity Curtain Custom": {
+            "name": "EnviroSieve Floating Turbidity Curtain Custom Made",
+            "range": "",
+            "type": "",
+            "size": "Custom",
+            "code": "76715",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-turbidity-curtain/",
+            "price": 0
+        }
+    },
+    "EnviroSieve Dewatering Tubes": {
+        "EnviroSieve Dewatering Tube 1.8m": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "3.6m Cir x 1.8m",
+            "code": "76493",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 190.8
+        },
+        "EnviroSieve Dewatering Tube 2.2m": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "4.5m Cir x 2.2m",
+            "code": "76495",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 298.75
+        },
+        "EnviroSieve Dewatering Tube 5m": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "4.5m Cir x 5m",
+            "code": "76491",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 1071.5
+        },
+        "EnviroSieve Dewatering Tube 10m": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "4.5m Cir x 10m",
+            "code": "76492",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 1509.8
+        }
+    },
+    "Timber Stakes": {
+        "Timber Stake 1": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 450mm",
+            "code": "13453",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 0.67
+        },
+        "Timber Stake 2": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 600mm",
+            "code": "13454",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 0.78
+        },
+        "Timber Stake 3": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 900mm",
+            "code": "13455",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.37
+        },
+        "Timber Stake 4": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 1200mm",
+            "code": "13456",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.75
+        },
+        "Timber Stake 5": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "45mm x 45mm x 450mm",
+            "code": "13457",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.27
+        },
+        "Timber Stake 6": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "45mm x 45mm x 600mm",
+            "code": "13458",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.48
+        },
+        "Timber Stake 7": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "45mm x 45mm x 900mm",
+            "code": "13459",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 2.48
+        }
+    },
+    "AquaDuct": {
+        "AquaDuct Single Cleat 225mm": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "225mm (OD285mm)",
+            "code": "76217",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 29.75
+        },
+        "Stainless Steel Strap 225mm": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "225mm",
+            "code": "76374",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 28.71
+        },
+        "AquaDuct Single Cleat 300mm": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "300mm (OD370mm)",
+            "code": "76219",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 33.31
+        },
+        "AquaDuct Double Cleat 300mm": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "300mm (OD370mm)",
+            "code": "76218",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 39.43
+        },
+        "Stainless Steel Strap 300mm": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "200mm",
+            "code": "76375",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 30.85
+        },
+        "AquaDuct Single Cleat 375mm": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "375mm (OD445mm)",
+            "code": "76221",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 34.57
+        },
+        "AquaDuct Double Cleat 375mm": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "375mm (OD445mm)",
+            "code": "76220",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 41.87
+        },
+        "Stainless Steel Strap 375mm": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "375mm",
+            "code": "76376",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 31.60
+        },
+        "AquaDuct Single Cleat 450mm": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "450mm (OD535mm)",
+            "code": "76223",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 36.42
+        },
+        "AquaDuct Double Cleat 450mm": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "450mm (OD535mm)",
+            "code": "76222",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 46.75
+        },
+        "Stainless Steel Strap 450mm": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "450mm",
+            "code": "76377",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 33.15
+        },
+        "AquaDuct Single Cleat 525mm": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "525mm (OD620mm)",
+            "code": "76225",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 40.62
+        },
+        "AquaDuct Double Cleat 525mm": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "525mm (OD620mm)",
+            "code": "76224",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 49.12
+        },
+        "Stainless Steel Strap 525mm": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "525mm",
+            "code": "76378",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 35.56
+        },
+        "AquaDuct Single Cleat 600mm": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "600mm (OD715mm)",
+            "code": "76227",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 46.67
+        },
+        "AquaDuct Double Cleat 600mm": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "600mm (OD715mm)",
+            "code": "76226",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 54.56
+        },
+        "Stainless Steel Strap 600mm": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "600mm",
+            "code": "76379",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 41.45
+        },
+        "AquaDuct Single Cleat 675mm": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "675mm (OD785mm)",
+            "code": "76229",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 59.99
+        },
+        "AquaDuct Double Cleat 675mm": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "675mm (OD785mm)",
+            "code": "76228",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 66.74
+        },
+        "Stainless Steel Strap 675mm": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "675mm",
+            "code": "76380",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 51.15
+        },
+        "AquaDuct Single Cleat 750mm": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "750mm (OD950mm)",
+            "code": "76231",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 71.55
+        },
+        "AquaDuct Double Cleat 750mm": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "750mm (OD865mm)",
+            "code": "76230",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 74.12
+        },
+        "Stainless Steel Strap 750mm": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "750mm",
+            "code": "76381",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 54.52
+        },
+        "AquaDuct Single Cleat 825mm": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "825mm (OD950mm)",
+            "code": "76233",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 80.73
+        },
+        "AquaDuct Double Cleat 825mm": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "825mm (OD950mm)",
+            "code": "76232",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 82.36
+        },
+        "Stainless Steel Strap 825mm": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "825mm",
+            "code": "76382",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 56.35
+        },
+        "AquaDuct Single Cleat 900mm": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "900mm (OD1045mm)",
+            "code": "76235",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 86.8
+        },
+        "AquaDuct Double Cleat 900mm": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "900mm (OD1045mm)",
+            "code": "76234",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 88.05
+        },
+        "Stainless Steel Strap 900mm": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "900mm",
+            "code": "76383",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 61.91
+        }
+    },
+    "FlexiFlume": {
+        "FlexiFlume Single Loop 1": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "150mm (OD)",
+            "code": "13425",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 18.11
+        },
+        "Stainless Steel Strap 2": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "225mm",
+            "code": "76374",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 28.71
+        },
+        "FlexiFlume Single Loop 3": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "250mm (OD)",
+            "code": "13426",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 18.63
+        },
+        "Stainless Steel Strap 4": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "300mm",
+            "code": "76375",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 30.85
+        },
+        "FlexiFlume Single Loop 5": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "350mm (OD)",
+            "code": "13427",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 19.67
+        },
+        "FlexiFlume Double Loop 6": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "350mm (OD)",
+            "code": "13428",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 22.67
+        },
+        "Stainless Steel Strap 7": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "375mm",
+            "code": "76376",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 31.60
+        },
+        "FlexiFlume Single Loop 8": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "450mm (OD)",
+            "code": "13428",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 22.25
+        },
+        "FlexiFlume Double Loop 9": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "450mm (OD)",
+            "code": "13487",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 25.98
+        },
+        "Stainless Steel Strap 10": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "450mm",
+            "code": "76377",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 33.15
+        },
+        "FlexiFlume Single Loop 11": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "550mm (OD)",
+            "code": "13429",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 25.88
+        },
+        "FlexiFlume Double Loop 12": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "550mm (OD)",
+            "code": "13488",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 27.27
+        },
+        "Stainless Steel Strap 13": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "600mm",
+            "code": "76379",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 41.45
+        },
+        "FlexiFlume Single Loop 14": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "650mm (OD)",
+            "code": "13430",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 27.95
+        },
+        "FlexiFlume Double Loop 15": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "650mm (OD)",
+            "code": "13489",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 29.29
+        },
+        "Stainless Steel Strap 16": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "675mm",
+            "code": "76380",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 51.15
+        },
+        "FlexiFlume Single Loop 17": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "750mm (OD)",
+            "code": "13431",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 30.02
+        },
+        "FlexiFlume Double Loop 18": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "750mm (OD)",
+            "code": "13490",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 31.57
+        },
+        "Stainless Steel Strap 19": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "750mm",
+            "code": "76381",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 54.52
         }
     }
 }
@@ -2666,7 +3532,7 @@ const bp3 = { //BP3 Prices
             "price": 750
         },
         "CTMP Sample": {
-            "name": "CTMP Saple Collection & Testing Fee",
+            "name": "CTMP Sample Collection & Testing Fee",
             "range": "",
             "type": "Services",
             "size": "",
@@ -2796,6 +3662,872 @@ const bp3 = { //BP3 Prices
             "unit": "Roll",
             "url": "https://cirtexcivil.co.nz/product/danline/",
             "price": 39.45
+        }
+    },
+    "Drain Filters": {
+        "Cesspit Filter Bag with Frame": {
+            "name": "Cesspit Filter Bag with Frame",
+            "range": "",
+            "type": "",
+            "size": "655mm x 450mm",
+            "code": "13196",
+            "unit": "Kit",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 231.75
+        },
+        "Cesspit Filter Bag Only": {
+            "name": "Cesspit Filter Bag Only",
+            "range": "",
+            "type": "",
+            "size": "655mm x 450mm",
+            "code": "13197",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 134.99
+        },
+        "Cesspit Filter Frame Only": {
+            "name": "Cesspit Filter Frame Only",
+            "range": "",
+            "type": "",
+            "size": "655mm x 450mm",
+            "code": "13437",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 97.58
+        },
+        "Cesspit Filter Dam with Foam Border": {
+            "name": "Cesspit Filter Dam with Foam Border",
+            "range": "",
+            "type": "Cesspit Filter",
+            "size": "",
+            "code": "13437",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 146.06
+        },
+        "Filter Pod Catchpit Filter": {
+            "name": "Filter Pod Catchpit Filter",
+            "range": "",
+            "type": "Filter Pod",
+            "size": "",
+            "code": "76399",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/filter-pods-catch-pit-filter/",
+            "price": 69.96
+        },
+        "Filter Pod Catchpit Filter with Foam Seal": {
+            "name": "Filter Pod Catchpit Filter with Foam Seal",
+            "range": "",
+            "type": "Filter Pod",
+            "size": "",
+            "code": "76779",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/filter-pods-catch-pit-filter/",
+            "price": 75.34
+        }
+    },
+    "Silt Socks": {
+        "Silt Sock Sawdust Filled 1": {
+            "name": "Silt Sock Sawdust Filled",
+            "range": "",
+            "type": "Filled",
+            "size": "225mm x 3m",
+            "code": "76662",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 48.9
+        },
+        "Silt Sock Sawdust Filled 2": {
+            "name": "Silt Sock Bark Filled",
+            "range": "",
+            "type": "Filled",
+            "size": "150mm x 2m",
+            "code": "13200",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 26.9
+        },
+        "Silt Sock Unfilled Green 3": {
+            "name": "Silt Sock Unfilled Green",
+            "range": "",
+            "type": "Unfilled",
+            "size": "150mm x 1m",
+            "code": "76029",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 3.98
+        },
+        "Silt Sock Unfilled Green 4": {
+            "name": "Silt Sock Unfilled Green",
+            "range": "",
+            "type": "Unfilled",
+            "size": "150mm x 2m",
+            "code": "13278",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 6.7
+        },
+        "Silt Sock Unfilled Green 5": {
+            "name": "Silt Sock Unfilled Green",
+            "range": "",
+            "type": "Unfilled",
+            "size": "150mm x 3m",
+            "code": "13279",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 9.85
+        },
+        "Filter Sock Black 6": {
+            "name": "Filter Sock Black",
+            "range": "",
+            "type": "Filter Sock",
+            "size": "200mm x 50m",
+            "code": "76719",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 96.20
+        },
+        "Filter Sock Black 7": {
+            "name": "Filter Sock Black",
+            "range": "",
+            "type": "Filter Sock",
+            "size": "250mm x 50m",
+            "code": "76738",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 98.70
+        },
+        "EnviroHEMP Spill Kit": {
+            "name": "EnviroHEMP Spill Kit",
+            "range": "",
+            "type": "EnviroHEMP",
+            "size": "240L",
+            "code": "56030",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirohemp-spill-kit/",
+            "price": 419.8
+        }
+    },
+    "Signal Spray Paint": {
+        "Signal Spray Paint Fluro Blue": {
+            "name": "Signal Spray Paint Fluro Blue",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13149",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Green": {
+            "name": "Signal Spray Paint Fluro Green",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13150",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Orange": {
+            "name": "Signal Spray Paint Fluro Orange",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13151",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Pink": {
+            "name": "Signal Spray Paint Fluro Pink",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13152",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Purple": {
+            "name": "Signal Spray Paint Fluro Purple",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13153",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Red": {
+            "name": "Signal Spray Paint Fluro Red",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13154",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Yellow": {
+            "name": "Signal Spray Paint Fluro Yellow",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13155",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint White": {
+            "name": "Signal Spray Paint White",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13156",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Wand 1": {
+            "name": "Signal Spray Wand",
+            "range": "",
+            "type": "",
+            "size": "600mm",
+            "code": "13482",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 101.66
+        },
+        "Signal Spray Wand 2": {
+            "name": "Signal Spray Wand",
+            "range": "",
+            "type": "",
+            "size": "700mm",
+            "code": "13483",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 101.66
+        }
+    },
+    "EnviroSieve Floating Turbidity Curtains": {
+        "EnviroSieve Floating Turbidity Curtain": {
+            "name": "EnviroSieve Floating Turbidity Curtain",
+            "range": "",
+            "type": "",
+            "size": "2m x 25m",
+            "code": "76715",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-turbidity-curtain/",
+            "price": 2065.5
+        },
+        "EnviroSieve Floating Turbidity Curtain Custom": {
+            "name": "EnviroSieve Floating Turbidity Curtain Custom Made",
+            "range": "",
+            "type": "",
+            "size": "Custom",
+            "code": "76715",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-turbidity-curtain/",
+            "price": 0
+        }
+    },
+    "EnviroSieve Dewatering Tubes": {
+        "EnviroSieve Dewatering Tube 1": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "3.6m Cir x 1.8m",
+            "code": "76493",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 182.25
+        },
+        "EnviroSieve Dewatering Tube 2": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "4.5m Cir x 2.2m",
+            "code": "76495",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 284.55
+        },
+        "EnviroSieve Dewatering Tube 3": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "4.5m Cir x 5m",
+            "code": "76491",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 998.6
+        },
+        "EnviroSieve Dewatering Tube 4": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "4.5m Cir x 10m",
+            "code": "76492",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 1437.4
+        }
+    },
+    "Timber Stakes": {
+        "Timber Stake": {
+            "name": "Timber Stake 1",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 450mm",
+            "code": "13453",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 0.67
+        },
+        "Timber Stake": {
+            "name": "Timber Stake 2",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 600mm",
+            "code": "13454",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 0.78
+        },
+        "Timber Stake": {
+            "name": "Timber Stake 3",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 900mm",
+            "code": "13455",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.37
+        },
+        "Timber Stake": {
+            "name": "Timber Stake 4",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 1200mm",
+            "code": "13456",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.75
+        },
+        "Timber Stake": {
+            "name": "Timber Stake 5",
+            "range": "",
+            "type": "",
+            "size": "45mm x 45mm x 450mm",
+            "code": "13457",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.27
+        },
+        "Timber Stake": {
+            "name": "Timber Stake 6",
+            "range": "",
+            "type": "",
+            "size": "45mm x 45mm x 600mm",
+            "code": "13458",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.48
+        },
+        "Timber Stake": {
+            "name": "Timber Stake 7",
+            "range": "",
+            "type": "",
+            "size": "45mm x 45mm x 900mm",
+            "code": "13459",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 2.48
+        }
+    },
+    "AquaDuct": {
+        "AquaDuct Single Cleat 1": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "225mm (OD285mm)",
+            "code": "76217",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 29.75
+        },
+        "Stainless Steel Strap 2": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "225mm",
+            "code": "76374",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 28.71
+        },
+        "AquaDuct Single Cleat 3": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "300mm (OD370mm)",
+            "code": "76219",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 33.31
+        },
+        "AquaDuct Double Cleat 4": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "300mm (OD370mm)",
+            "code": "76218",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 39.43
+        },
+        "Stainless Steel Strap 5": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "200mm",
+            "code": "76375",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 30.85
+        },
+        "AquaDuct Single Cleat 6": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "375mm (OD445mm)",
+            "code": "76221",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 34.57
+        },
+        "AquaDuct Double Cleat 7": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "375mm (OD445mm)",
+            "code": "76220",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 41.87
+        },
+        "Stainless Steel Strap 8": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "200mm",
+            "code": "76376",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 31.60
+        },
+        "AquaDuct Single Cleat 9": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "450mm (OD535mm)",
+            "code": "76223",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 36.42
+        },
+        "AquaDuct Double Cleat 10": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "450mm (OD535mm)",
+            "code": "76222",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 46.75
+        },
+        "Stainless Steel Strap 11": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "450mm",
+            "code": "76377",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 33.15
+        },
+        "AquaDuct Single Cleat 12": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "525mm (OD620mm)",
+            "code": "76225",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 40.62
+        },
+        "AquaDuct Double Cleat 13": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "525mm (OD620mm)",
+            "code": "76224",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 49.12
+        },
+        "Stainless Steel Strap 14": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "525mm",
+            "code": "76378",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 35.56
+        },
+        "AquaDuct Single Cleat 15": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "600mm (OD715mm)",
+            "code": "76227",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 46.67
+        },
+        "AquaDuct Double Cleat 16": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "600mm (OD715mm)",
+            "code": "76226",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 54.56
+        },
+        "Stainless Steel Strap 17": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "600mm",
+            "code": "76379",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 41.45
+        },
+        "AquaDuct Single Cleat 18": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "675mm (OD785mm)",
+            "code": "76229",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 59.99
+        },
+        "AquaDuct Double Cleat 19": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "675mm (OD785mm)",
+            "code": "76228",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 66.74
+        },
+        "Stainless Steel Strap 20": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "675mm",
+            "code": "76380",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 51.15
+        },
+        "AquaDuct Single Cleat 21": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "750mm (OD950mm)",
+            "code": "76231",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 71.55
+        },
+        "AquaDuct Double Cleat 22": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "750mm (OD865mm)",
+            "code": "76230",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 74.12
+        },
+        "Stainless Steel Strap 23": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "750mm",
+            "code": "76381",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 54.52
+        },
+        "AquaDuct Single Cleat 24": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "825mm (OD950mm)",
+            "code": "76233",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 80.73
+        },
+        "AquaDuct Double Cleat 25": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "825mm (OD950mm)",
+            "code": "76232",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 82.36
+        },
+        "Stainless Steel Strap 26": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "825mm",
+            "code": "76382",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 56.35
+        },
+        "AquaDuct Single Cleat 27": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "900mm (OD1045mm)",
+            "code": "76235",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 86.8
+        },
+        "AquaDuct Double Cleat 28": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "900mm (OD1045mm)",
+            "code": "76234",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 88.05
+        },
+        "Stainless Steel Strap 29": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "900mm",
+            "code": "76383",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 61.91
+        }
+    },
+    "FlexiFlume": {
+        "FlexiFlume Single Loop 1": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "150mm (OD)",
+            "code": "13425",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 18.11
+        },
+        "Stainless Steel Strap 2": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "225mm",
+            "code": "76374",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 28.71
+        },
+        "FlexiFlume Single Loop 3": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "250mm (OD)",
+            "code": "13426",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 18.63
+        },
+        "Stainless Steel Strap 4": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "300mm",
+            "code": "76375",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 30.85
+        },
+        "FlexiFlume Single Loop 5": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "350mm (OD)",
+            "code": "13427",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 19.67
+        },
+        "FlexiFlume Double Loop 6": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "350mm (OD)",
+            "code": "13428",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 22.67
+        },
+        "Stainless Steel Strap 7": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "375mm",
+            "code": "76376",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 31.60
+        },
+        "FlexiFlume Single Loop 8": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "450mm (OD)",
+            "code": "13428",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 22.25
+        },
+        "FlexiFlume Double Loop 9": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "450mm (OD)",
+            "code": "13487",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 25.98
+        },
+        "Stainless Steel Strap 10": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "450mm",
+            "code": "76377",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 33.15
+        },
+        "FlexiFlume Single Loop 11": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "550mm (OD)",
+            "code": "13429",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 25.88
+        },
+        "FlexiFlume Double Loop 12": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "550mm (OD)",
+            "code": "13488",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 27.27
+        },
+        "Stainless Steel Strap 13": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "600mm",
+            "code": "76379",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 41.45
+        },
+        "FlexiFlume Single Loop 14": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "650mm (OD)",
+            "code": "13430",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 27.95
+        },
+        "FlexiFlume Double Loop 15": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "650mm (OD)",
+            "code": "13489",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 29.29
+        },
+        "Stainless Steel Strap 16": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "675mm",
+            "code": "76380",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 51.15
+        },
+        "FlexiFlume Single Loop 17": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "750mm (OD)",
+            "code": "13431",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 30.02
+        },
+        "FlexiFlume Double Loop 18": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "750mm (OD)",
+            "code": "13490",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 31.57
+        },
+        "Stainless Steel Strap 19": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "750mm",
+            "code": "76381",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 54.52
         }
     }
 }
@@ -4067,7 +5799,7 @@ const bp4 = { //BP4 Prices
             "price": 750
         },
         "CTMP Sample": {
-            "name": "CTMP Saple Collection & Testing Fee",
+            "name": "CTMP Sample Collection & Testing Fee",
             "range": "",
             "type": "Services",
             "size": "",
@@ -4197,6 +5929,872 @@ const bp4 = { //BP4 Prices
             "unit": "Roll",
             "url": "https://cirtexcivil.co.nz/product/danline/",
             "price": 39.45
+        }
+    },
+    "Drain Filters": {
+        "Cesspit Filter Bag with Frame": {
+            "name": "Cesspit Filter Bag with Frame",
+            "range": "",
+            "type": "",
+            "size": "655mm x 450mm",
+            "code": "13196",
+            "unit": "Kit",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 230.63
+        },
+        "Cesspit Filter Bag Only": {
+            "name": "Cesspit Filter Bag Only",
+            "range": "",
+            "type": "",
+            "size": "655mm x 450mm",
+            "code": "13197",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 130.15
+        },
+        "Cesspit Filter Frame Only": {
+            "name": "Cesspit Filter Frame Only",
+            "range": "",
+            "type": "",
+            "size": "655mm x 450mm",
+            "code": "13437",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 97.58
+        },
+        "Cesspit Filter Dam with Foam Border": {
+            "name": "Cesspit Filter Dam with Foam Border",
+            "range": "",
+            "type": "Cesspit Filter",
+            "size": "",
+            "code": "13437",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 140.99
+        },
+        "Filter Pod Catchpit Filter": {
+            "name": "Filter Pod Catchpit Filter",
+            "range": "",
+            "type": "Filter Pod",
+            "size": "",
+            "code": "76399",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/filter-pods-catch-pit-filter/",
+            "price": 69.96
+        },
+        "Filter Pod Catchpit Filter with Foam Seal": {
+            "name": "Filter Pod Catchpit Filter with Foam Seal",
+            "range": "",
+            "type": "Filter Pod",
+            "size": "",
+            "code": "76779",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/filter-pods-catch-pit-filter/",
+            "price": 74.26
+        }
+    },
+    "Silt Socks": {
+        "Silt Sock Sawdust Filled 1": {
+            "name": "Silt Sock Sawdust Filled",
+            "range": "",
+            "type": "Filled",
+            "size": "225mm x 3m",
+            "code": "76662",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 48.9
+        },
+        "Silt Sock Sawdust Filled 2": {
+            "name": "Silt Sock Bark Filled",
+            "range": "",
+            "type": "Filled",
+            "size": "150mm x 2m",
+            "code": "13200",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 26.9
+        },
+        "Silt Sock Unfilled Green 3": {
+            "name": "Silt Sock Unfilled Green",
+            "range": "",
+            "type": "Unfilled",
+            "size": "150mm x 1m",
+            "code": "76029",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 3.48
+        },
+        "Silt Sock Unfilled Green 4": {
+            "name": "Silt Sock Unfilled Green",
+            "range": "",
+            "type": "Unfilled",
+            "size": "150mm x 2m",
+            "code": "13278",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 6.7
+        },
+        "Silt Sock Unfilled Green 5": {
+            "name": "Silt Sock Unfilled Green",
+            "range": "",
+            "type": "Unfilled",
+            "size": "150mm x 3m",
+            "code": "13279",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 9.85
+        },
+        "Filter Sock Black 6": {
+            "name": "Filter Sock Black",
+            "range": "",
+            "type": "Filter Sock",
+            "size": "200mm x 50m",
+            "code": "76719",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 96.20
+        },
+        "Filter Sock Black 7": {
+            "name": "Filter Sock Black",
+            "range": "",
+            "type": "Filter Sock",
+            "size": "250mm x 50m",
+            "code": "76738",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 98.70
+        },
+        "EnviroHEMP Spill Kit 8": {
+            "name": "EnviroHEMP Spill Kit",
+            "range": "",
+            "type": "EnviroHEMP",
+            "size": "240L",
+            "code": "56030",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirohemp-spill-kit/",
+            "price": 419.8
+        }
+    },
+    "Signal Spray Paint": {
+        "Signal Spray Paint Fluro Blue": {
+            "name": "Signal Spray Paint Fluro Blue",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13149",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Green": {
+            "name": "Signal Spray Paint Fluro Green",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13150",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Orange": {
+            "name": "Signal Spray Paint Fluro Orange",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13151",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Pink": {
+            "name": "Signal Spray Paint Fluro Pink",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13152",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Purple": {
+            "name": "Signal Spray Paint Fluro Purple",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13153",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Red": {
+            "name": "Signal Spray Paint Fluro Red",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13154",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Yellow": {
+            "name": "Signal Spray Paint Fluro Yellow",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13155",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint White": {
+            "name": "Signal Spray Paint White",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13156",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Wand": {
+            "name": "Signal Spray Wand 1",
+            "range": "",
+            "type": "",
+            "size": "600mm",
+            "code": "13482",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 101.66
+        },
+        "Signal Spray Wand": {
+            "name": "Signal Spray Wand 2",
+            "range": "",
+            "type": "",
+            "size": "700mm",
+            "code": "13483",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 101.66
+        }
+    },
+    "EnviroSieve Floating Turbidity Curtains": {
+        "EnviroSieve Floating Turbidity Curtain": {
+            "name": "EnviroSieve Floating Turbidity Curtain",
+            "range": "",
+            "type": "",
+            "size": "2m x 25m",
+            "code": "76715",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-turbidity-curtain/",
+            "price": 2065.5
+        },
+        "EnviroSieve Floating Turbidity Curtain Custom": {
+            "name": "EnviroSieve Floating Turbidity Curtain Custom Made",
+            "range": "",
+            "type": "",
+            "size": "Custom",
+            "code": "76715",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-turbidity-curtain/",
+            "price": 0
+        }
+    },
+    "EnviroSieve Dewatering Tubes": {
+        "EnviroSieve Dewatering Tube 1": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "3.6m Cir x 1.8m",
+            "code": "76493",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 181.25
+        },
+        "EnviroSieve Dewatering Tube 2": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "4.5m Cir x 2.2m",
+            "code": "76495",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 284.55
+        },
+        "EnviroSieve Dewatering Tube 3": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "4.5m Cir x 5m",
+            "code": "76491",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 998.6
+        },
+        "EnviroSieve Dewatering Tube 4": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "4.5m Cir x 10m",
+            "code": "76492",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 1437.4
+        }
+    },
+    "Timber Stakes": {
+        "Timber Stake 1": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 450mm",
+            "code": "13453",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 0.67
+        },
+        "Timber Stake 2": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 600mm",
+            "code": "13454",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 0.78
+        },
+        "Timber Stake 3": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 900mm",
+            "code": "13455",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.37
+        },
+        "Timber Stake 4": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 1200mm",
+            "code": "13456",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.75
+        },
+        "Timber Stake 5": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "45mm x 45mm x 450mm",
+            "code": "13457",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.27
+        },
+        "Timber Stake 6": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "45mm x 45mm x 600mm",
+            "code": "13458",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.48
+        },
+        "Timber Stake 7": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "45mm x 45mm x 900mm",
+            "code": "13459",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 2.48
+        }
+    },
+    "AquaDuct": {
+        "AquaDuct Single Cleat 1": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "225mm (OD285mm)",
+            "code": "76217",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 29.75
+        },
+        "Stainless Steel Strap 2": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "225mm",
+            "code": "76374",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 28.71
+        },
+        "AquaDuct Single Cleat 3": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "300mm (OD370mm)",
+            "code": "76219",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 33.31
+        },
+        "AquaDuct Double Cleat 4": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "300mm (OD370mm)",
+            "code": "76218",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 39.43
+        },
+        "Stainless Steel Strap 5": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "200mm",
+            "code": "76375",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 30.85
+        },
+        "AquaDuct Single Cleat 6": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "375mm (OD445mm)",
+            "code": "76221",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 34.57
+        },
+        "AquaDuct Double Cleat 7": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "375mm (OD445mm)",
+            "code": "76220",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 41.87
+        },
+        "Stainless Steel Strap 8": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "200mm",
+            "code": "76376",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 31.60
+        },
+        "AquaDuct Single Cleat 9": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "450mm (OD535mm)",
+            "code": "76223",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 36.42
+        },
+        "AquaDuct Double Cleat 10": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "450mm (OD535mm)",
+            "code": "76222",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 46.75
+        },
+        "Stainless Steel Strap 11": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "450mm",
+            "code": "76377",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 33.15
+        },
+        "AquaDuct Single Cleat 12": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "525mm (OD620mm)",
+            "code": "76225",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 40.62
+        },
+        "AquaDuct Double Cleat 13": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "525mm (OD620mm)",
+            "code": "76224",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 49.12
+        },
+        "Stainless Steel Strap 14": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "525mm",
+            "code": "76378",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 35.56
+        },
+        "AquaDuct Single Cleat 15": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "600mm (OD715mm)",
+            "code": "76227",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 46.67
+        },
+        "AquaDuct Double Cleat 16": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "600mm (OD715mm)",
+            "code": "76226",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 54.56
+        },
+        "Stainless Steel Strap 17": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "600mm",
+            "code": "76379",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 41.45
+        },
+        "AquaDuct Single Cleat 18": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "675mm (OD785mm)",
+            "code": "76229",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 59.99
+        },
+        "AquaDuct Double Cleat 19": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "675mm (OD785mm)",
+            "code": "76228",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 66.74
+        },
+        "Stainless Steel Strap 20": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "675mm",
+            "code": "76380",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 51.15
+        },
+        "AquaDuct Single Cleat 21": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "750mm (OD950mm)",
+            "code": "76231",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 71.55
+        },
+        "AquaDuct Double Cleat 22": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "750mm (OD865mm)",
+            "code": "76230",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 74.12
+        },
+        "Stainless Steel Strap 23": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "750mm",
+            "code": "76381",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 54.52
+        },
+        "AquaDuct Single Cleat 24": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "825mm (OD950mm)",
+            "code": "76233",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 80.73
+        },
+        "AquaDuct Double Cleat 25": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "825mm (OD950mm)",
+            "code": "76232",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 82.36
+        },
+        "Stainless Steel Strap 26": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "825mm",
+            "code": "76382",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 56.35
+        },
+        "AquaDuct Single Cleat 27": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "900mm (OD1045mm)",
+            "code": "76235",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 86.8
+        },
+        "AquaDuct Double Cleat 28": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "900mm (OD1045mm)",
+            "code": "76234",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 88.05
+        },
+        "Stainless Steel Strap 29": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "900mm",
+            "code": "76383",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 61.91
+        }
+    },
+    "FlexiFlume": {
+        "FlexiFlume Single Loop 1": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "150mm (OD)",
+            "code": "13425",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 18.11
+        },
+        "Stainless Steel Strap 2": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "225mm",
+            "code": "76374",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 28.71
+        },
+        "FlexiFlume Single Loop 3": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "250mm (OD)",
+            "code": "13426",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 18.63
+        },
+        "Stainless Steel Strap 4": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "300mm",
+            "code": "76375",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 30.85
+        },
+        "FlexiFlume Single Loop 5": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "350mm (OD)",
+            "code": "13427",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 19.67
+        },
+        "FlexiFlume Double Loop 6": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "350mm (OD)",
+            "code": "13428",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 22.67
+        },
+        "Stainless Steel Strap 7": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "375mm",
+            "code": "76376",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 31.60
+        },
+        "FlexiFlume Single Loop 8": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "450mm (OD)",
+            "code": "13428",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 22.25
+        },
+        "FlexiFlume Double Loop 9": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "450mm (OD)",
+            "code": "13487",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 25.98
+        },
+        "Stainless Steel Strap 10": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "450mm",
+            "code": "76377",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 33.15
+        },
+        "FlexiFlume Single Loop 11": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "550mm (OD)",
+            "code": "13429",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 25.88
+        },
+        "FlexiFlume Double Loop 12": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "550mm (OD)",
+            "code": "13488",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 27.27
+        },
+        "Stainless Steel Strap 13": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "600mm",
+            "code": "76379",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 41.45
+        },
+        "FlexiFlume Single Loop 14": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "650mm (OD)",
+            "code": "13430",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 27.95
+        },
+        "FlexiFlume Double Loop 15": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "650mm (OD)",
+            "code": "13489",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 29.29
+        },
+        "Stainless Steel Strap 16": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "675mm",
+            "code": "76380",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 51.15
+        },
+        "FlexiFlume Single Loop 17": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "750mm (OD)",
+            "code": "13431",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 30.02
+        },
+        "FlexiFlume Double Loop 18": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "750mm (OD)",
+            "code": "13490",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 31.57
+        },
+        "Stainless Steel Strap 19": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "750mm",
+            "code": "76381",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 54.52
         }
     }
 }
@@ -5468,7 +8066,7 @@ const bp5 = { //BP5 Prices
             "price": 750
         },
         "CTMP Sample": {
-            "name": "CTMP Saple Collection & Testing Fee",
+            "name": "CTMP Sample Collection & Testing Fee",
             "range": "",
             "type": "Services",
             "size": "",
@@ -5599,14 +8197,880 @@ const bp5 = { //BP5 Prices
             "url": "https://cirtexcivil.co.nz/product/danline/",
             "price": 39.45
         }
+    },
+    "Drain Filters": {
+        "Cesspit Filter Bag with Frame": {
+            "name": "Cesspit Filter Bag with Frame",
+            "range": "",
+            "type": "",
+            "size": "655mm x 450mm",
+            "code": "13196",
+            "unit": "Kit",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 225
+        },
+        "Cesspit Filter Bag Only": {
+            "name": "Cesspit Filter Bag Only",
+            "range": "",
+            "type": "",
+            "size": "655mm x 450mm",
+            "code": "13197",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 130.15
+        },
+        "Cesspit Filter Frame Only": {
+            "name": "Cesspit Filter Frame Only",
+            "range": "",
+            "type": "",
+            "size": "655mm x 450mm",
+            "code": "13437",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 97.58
+        },
+        "Cesspit Filter Dam with Foam Border": {
+            "name": "Cesspit Filter Dam with Foam Border",
+            "range": "",
+            "type": "Cesspit Filter",
+            "size": "",
+            "code": "13437",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/cesspit-filter-bags/",
+            "price": 140.99
+        },
+        "Filter Pod Catchpit Filter": {
+            "name": "Filter Pod Catchpit Filter",
+            "range": "",
+            "type": "Filter Pod",
+            "size": "",
+            "code": "76399",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/filter-pods-catch-pit-filter/",
+            "price": 69.96
+        },
+        "Filter Pod Catchpit Filter with Foam Seal": {
+            "name": "Filter Pod Catchpit Filter with Foam Seal",
+            "range": "",
+            "type": "Filter Pod",
+            "size": "",
+            "code": "76779",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/filter-pods-catch-pit-filter/",
+            "price": 74.26
+        }
+    },
+    "Silt Socks": {
+        "Silt Sock Sawdust Filled 1": {
+            "name": "Silt Sock Sawdust Filled",
+            "range": "",
+            "type": "Filled",
+            "size": "225mm x 3m",
+            "code": "76662",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 48.9
+        },
+        "Silt Sock Sawdust Filled 2": {
+            "name": "Silt Sock Bark Filled",
+            "range": "",
+            "type": "Filled",
+            "size": "150mm x 2m",
+            "code": "13200",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 26.9
+        },
+        "Silt Sock Unfilled Green 3": {
+            "name": "Silt Sock Unfilled Green",
+            "range": "",
+            "type": "Unfilled",
+            "size": "150mm x 1m",
+            "code": "76029",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 3.48
+        },
+        "Silt Sock Unfilled Green 4": {
+            "name": "Silt Sock Unfilled Green",
+            "range": "",
+            "type": "Unfilled",
+            "size": "150mm x 2m",
+            "code": "13278",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 5.97
+        },
+        "Silt Sock Unfilled Green 5": {
+            "name": "Silt Sock Unfilled Green",
+            "range": "",
+            "type": "Unfilled",
+            "size": "150mm x 3m",
+            "code": "13279",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 8.96
+        },
+        "Filter Sock Black 6": {
+            "name": "Filter Sock Black",
+            "range": "",
+            "type": "Filter Sock",
+            "size": "200mm x 50m",
+            "code": "76719",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 83.5
+        },
+        "Filter Sock Black 7": {
+            "name": "Filter Sock Black",
+            "range": "",
+            "type": "Filter Sock",
+            "size": "250mm x 50m",
+            "code": "76738",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/siltsock/",
+            "price": 85
+        },
+        "EnviroHEMP Spill Kit": {
+            "name": "EnviroHEMP Spill Kit",
+            "range": "",
+            "type": "EnviroHEMP",
+            "size": "240L",
+            "code": "56030",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirohemp-spill-kit/",
+            "price": 419.8
+        }
+    },
+    "Signal Spray Paint": {
+        "Signal Spray Paint Fluro Blue": {
+            "name": "Signal Spray Paint Fluro Blue",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13149",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Green": {
+            "name": "Signal Spray Paint Fluro Green",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13150",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Orange": {
+            "name": "Signal Spray Paint Fluro Orange",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13151",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Pink": {
+            "name": "Signal Spray Paint Fluro Pink",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13152",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Purple": {
+            "name": "Signal Spray Paint Fluro Purple",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13153",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Red": {
+            "name": "Signal Spray Paint Fluro Red",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13154",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint Fluro Yellow": {
+            "name": "Signal Spray Paint Fluro Yellow",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13155",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Paint White": {
+            "name": "Signal Spray Paint White",
+            "range": "",
+            "type": "Inverted",
+            "size": "400ml",
+            "code": "13156",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 3.54
+        },
+        "Signal Spray Wand 1": {
+            "name": "Signal Spray Wand",
+            "range": "",
+            "type": "",
+            "size": "600mm",
+            "code": "13482",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 99.4
+        },
+        "Signal Spray Wand 2": {
+            "name": "Signal Spray Wand",
+            "range": "",
+            "type": "",
+            "size": "700mm",
+            "code": "13483",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/signal-spray-paint/",
+            "price": 99.4
+        }
+    },
+    "EnviroSieve Floating Turbidity Curtains": {
+        "EnviroSieve Floating Turbidity Curtain": {
+            "name": "EnviroSieve Floating Turbidity Curtain",
+            "range": "",
+            "type": "",
+            "size": "2m x 25m",
+            "code": "76715",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-turbidity-curtain/",
+            "price": 1822.9
+        },
+        "EnviroSieve Floating Turbidity Curtain Custom": {
+            "name": "EnviroSieve Floating Turbidity Curtain Custom Made",
+            "range": "",
+            "type": "",
+            "size": "Custom",
+            "code": "76715",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-turbidity-curtain/",
+            "price": 0
+        }
+    },
+    "EnviroSieve Dewatering Tubes": {
+        "EnviroSieve Dewatering Tube 1": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "3.6m Cir x 1.8m",
+            "code": "76493",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 173.2
+        },
+        "EnviroSieve Dewatering Tube 2": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "4.5m Cir x 2.2m",
+            "code": "76495",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 270.9
+        },
+        "EnviroSieve Dewatering Tube 3": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "4.5m Cir x 5m",
+            "code": "76491",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 965.4
+        },
+        "EnviroSieve Dewatering Tube 4": {
+            "name": "EnviroSieve Dewatering Tube",
+            "range": "",
+            "type": "",
+            "size": "4.5m Cir x 10m",
+            "code": "76492",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/envirosieve-dewatering-tubes/",
+            "price": 1365
+        }
+    },
+    "Timber Stakes": {
+        "Timber Stake 1": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 450mm",
+            "code": "13453",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 0.67
+        },
+        "Timber Stake 2": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 600mm",
+            "code": "13454",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 0.78
+        },
+        "Timber Stake 3": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 900mm",
+            "code": "13455",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.37
+        },
+        "Timber Stake 4": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "50mm x 22mm x 1200mm",
+            "code": "13456",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.75
+        },
+        "Timber Stake 5": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "45mm x 45mm x 450mm",
+            "code": "13457",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.27
+        },
+        "Timber Stake 6": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "45mm x 45mm x 600mm",
+            "code": "13458",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 1.48
+        },
+        "Timber Stake 7": {
+            "name": "Timber Stake",
+            "range": "",
+            "type": "",
+            "size": "45mm x 45mm x 900mm",
+            "code": "13459",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/timber-stakes/",
+            "price": 2.48
+        }
+    },
+    "AquaDuct": {
+        "AquaDuct Single Cleat 1": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "225mm (OD285mm)",
+            "code": "76217",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 29.75
+        },
+        "Stainless Steel Strap 2": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "225mm",
+            "code": "76374",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 28.71
+        },
+        "AquaDuct Single Cleat 3": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "300mm (OD370mm)",
+            "code": "76219",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 33.31
+        },
+        "AquaDuct Double Cleat 4": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "300mm (OD370mm)",
+            "code": "76218",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 39.43
+        },
+        "Stainless Steel Strap 5": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "200mm",
+            "code": "76375",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 30.85
+        },
+        "AquaDuct Single Cleat 6": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "375mm (OD445mm)",
+            "code": "76221",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 34.57
+        },
+        "AquaDuct Double Cleat 7": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "375mm (OD445mm)",
+            "code": "76220",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 41.87
+        },
+        "Stainless Steel Strap 8": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "200mm",
+            "code": "76376",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 31.60
+        },
+        "AquaDuct Single Cleat 9": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "450mm (OD535mm)",
+            "code": "76223",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 36.42
+        },
+        "AquaDuct Double Cleat 10": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "450mm (OD535mm)",
+            "code": "76222",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 46.75
+        },
+        "Stainless Steel Strap 11": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "450mm",
+            "code": "76377",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 33.15
+        },
+        "AquaDuct Single Cleat 12": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "525mm (OD620mm)",
+            "code": "76225",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 40.62
+        },
+        "AquaDuct Double Cleat 13": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "525mm (OD620mm)",
+            "code": "76224",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 49.12
+        },
+        "Stainless Steel Strap 14": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "525mm",
+            "code": "76378",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 35.56
+        },
+        "AquaDuct Single Cleat 15": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "600mm (OD715mm)",
+            "code": "76227",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 46.67
+        },
+        "AquaDuct Double Cleat 16": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "600mm (OD715mm)",
+            "code": "76226",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 54.56
+        },
+        "Stainless Steel Strap 17": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "600mm",
+            "code": "76379",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 41.45
+        },
+        "AquaDuct Single Cleat 18": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "675mm (OD785mm)",
+            "code": "76229",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 59.99
+        },
+        "AquaDuct Double Cleat 19": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "675mm (OD785mm)",
+            "code": "76228",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 66.74
+        },
+        "Stainless Steel Strap 20": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "675mm",
+            "code": "76380",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 51.15
+        },
+        "AquaDuct Single Cleat 21": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "750mm (OD950mm)",
+            "code": "76231",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 71.55
+        },
+        "AquaDuct Double Cleat 22": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "750mm (OD865mm)",
+            "code": "76230",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 74.12
+        },
+        "Stainless Steel Strap 23": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "750mm",
+            "code": "76381",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 54.52
+        },
+        "AquaDuct Single Cleat 24": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "825mm (OD950mm)",
+            "code": "76233",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 80.73
+        },
+        "AquaDuct Double Cleat 25": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "825mm (OD950mm)",
+            "code": "76232",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 82.36
+        },
+        "Stainless Steel Strap 26": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "825mm",
+            "code": "76382",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 56.35
+        },
+        "AquaDuct Single Cleat 27": {
+            "name": "AquaDuct Single Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "900mm (OD1045mm)",
+            "code": "76235",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 86.8
+        },
+        "AquaDuct Double Cleat 28": {
+            "name": "AquaDuct Double Cleat",
+            "range": "",
+            "type": "AquaDuct",
+            "size": "900mm (OD1045mm)",
+            "code": "76234",
+            "unit": "Mtr",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 88.05
+        },
+        "Stainless Steel Strap 29": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "900mm",
+            "code": "76383",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/aquaduct/",
+            "price": 61.91
+        }
+    },
+    "FlexiFlume": {
+        "FlexiFlume Single Loop 1": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "150mm (OD)",
+            "code": "13425",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 18.11
+        },
+        "Stainless Steel Strap 2": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "225mm",
+            "code": "76374",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 28.71
+        },
+        "FlexiFlume Single Loop 3": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "250mm (OD)",
+            "code": "13426",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 18.63
+        },
+        "Stainless Steel Strap 4": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "300mm",
+            "code": "76375",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 30.85
+        },
+        "FlexiFlume Single Loop 5": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "350mm (OD)",
+            "code": "13427",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 19.67
+        },
+        "FlexiFlume Double Loop 6": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "350mm (OD)",
+            "code": "13428",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 22.67
+        },
+        "Stainless Steel Strap 7": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "375mm",
+            "code": "76376",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 31.60
+        },
+        "FlexiFlume Single Loop 8": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "450mm (OD)",
+            "code": "13428",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 22.25
+        },
+        "FlexiFlume Double Loop 9": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "450mm (OD)",
+            "code": "13487",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 25.98
+        },
+        "Stainless Steel Strap 10": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "450mm",
+            "code": "76377",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 33.15
+        },
+        "FlexiFlume Single Loop 11": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "550mm (OD)",
+            "code": "13429",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 25.88
+        },
+        "FlexiFlume Double Loop 12": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "550mm (OD)",
+            "code": "13488",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 27.27
+        },
+        "Stainless Steel Strap 13": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "600mm",
+            "code": "76379",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 41.45
+        },
+        "FlexiFlume Single Loop 14": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "650mm (OD)",
+            "code": "13430",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 27.95
+        },
+        "FlexiFlume Double Loop 15": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "650mm (OD)",
+            "code": "13489",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 29.29
+        },
+        "Stainless Steel Strap 16": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "675mm",
+            "code": "76380",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 51.15
+        },
+        "FlexiFlume Single Loop 17": {
+            "name": "FlexiFlume Single Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "750mm (OD)",
+            "code": "13431",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 30.02
+        },
+        "FlexiFlume Double Loop 18": {
+            "name": "FlexiFlume Double Loop",
+            "range": "",
+            "type": "FlexiFlume",
+            "size": "750mm (OD)",
+            "code": "13490",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 31.57
+        },
+        "Stainless Steel Strap 19": {
+            "name": "Stainless Steel Strap",
+            "range": "",
+            "type": "Straps",
+            "size": "750mm",
+            "code": "76381",
+            "unit": "Each",
+            "url": "https://cirtexcivil.co.nz/product/flexiflume/",
+            "price": 54.52
+        }
     }
 }
 
-let basePrice
+let basePrice 
 
 productTypes = ['All']
 let selectedProduct = "Geotextiles"
-var results = document.querySelector('#productResults')
+let results = document.querySelector('#productResults')
 
 function productSearch(term, parameter) {
     for (x = 0; x < Object.keys(basePrice).length; x++) {
@@ -5615,7 +9079,6 @@ function productSearch(term, parameter) {
         for (i = 0; i < items.length; i++) {
             if (items[i][1][`${parameter}`].toLowerCase().includes(term.toLowerCase())) {
                 let item = items[i][1]
-                console.log(item)
                 clearProducts()
                 renderProduct(0, item)
             } else {
@@ -5643,7 +9106,7 @@ function filterProductType(filter) {
     }
 }
 
-auth.onAuthStateChanged(function(user){
+auth.onAuthStateChanged(() => {
     currentUser = auth.currentUser
     users.get()
         .then((snapshot) => {
@@ -5665,9 +9128,29 @@ auth.onAuthStateChanged(function(user){
                     } else {
                         let pricingNotice = `
                             <h2>My Cirtex</h2>
-                            <p style="font-size: 13px;">It looks like your account is not yet set up to view pricing. <a href="mailto:andrew.landes@cirtex.co.nz">Contact us</a> to request this feature</p>
+                            <p id="text" style="font-size: 13px;">It looks like your account is not yet set up to view pricing. <a href="#" id="requestPricing">Click here to request this feature.</a></p>
                         `
                         document.querySelector('#applicationContent').insertAdjacentHTML('beforeend', pricingNotice)
+
+                        // Request pricing email
+                        document.querySelector('#requestPricing').addEventListener("click", (e) => {
+                            let text = document.querySelector('#text')
+                            text.innerHTML = "Please wait while we process this request. Do not leave the page."
+                            e.preventDefault()
+                            Email.send({
+                                SecureToken : "e6ab7043-8101-41a5-a43e-abfadac04ca7",
+                                To : 'danica.cumming@cirtex.co.nz',
+                                From : "andrew.landes@cirtex.co.nz",
+                                Subject : "New Pricing Module Request - Civil Hub",
+                                Body : `${currentUser.email} has requested access to the pricing module on the Civil Hub.<br><br>Forward this email to andrew.landes@cirtex.co.nz if you approve this request.`
+                            }).then(() => {
+                                text.innerHTML = "Successfully sent. Requests can take up to 24 hours to process."
+                                alert("Your request has been sent to our team, we'll notify you if you're eligible for this feature.", "Success!")
+                            }).catch(err => {
+                                text.innerHTML = "Click here to request this feature."
+                                alert(err.message, "Error!")
+                            })
+                        })
                     }
                 }
             })
@@ -5736,6 +9219,14 @@ function renderBP() {
                         <option value="Shade Cloth">Shade Cloth</option>
                         <option value="Floc Shed">Floc Shed</option>
                         <option value="Pond Decanting">Pond Decanting</option>
+                        <option value="Drain Filters">Drain Filters</option>
+                        <option value="Silt Socks">Silt Socks</option>
+                        <option value="Signal Spray Paint">Signal Spray Paint</option>
+                        <option value="EnviroSieve Floating Turbidity Curtains">EnviroSieve Floating Turbidity Curtains</option>
+                        <option value="EnviroSieve Dewatering Tubes">EnviroSieve Dewatering Tubes</option>
+                        <option value="Timber Stakes">Timber Stakes</option>
+                        <option value="AquaDuct">AquaDuct</option>
+                        <option value="FlexiFlume">FlexiFlume</option>
                     </select>
                 </div>
             </label>
@@ -5839,6 +9330,7 @@ function randomIDGenerator() {
 function removeLineItem(id) {
     document.querySelector('#orderItems').removeChild(document.querySelector(`#${id}`))
     calculateCost()
+    alert("The item has been removed from your cart.", "Removed")
 }
 
 function addToOrder(item) {
@@ -5850,6 +9342,7 @@ function addToOrder(item) {
             let qty = document.querySelector(`#${items[i].id}QTY`)
             qty.value = parseInt(qty.value) + 1
             calculateCost()
+            alert("The item has been added to your cart.", "Added")
             return
         }
     }
@@ -5877,6 +9370,7 @@ function addToOrder(item) {
 
     document.querySelector('#orderItems').insertAdjacentHTML('beforeend', lineItem)
     calculateCost()
+    alert("The item has been added to your cart.", "Added")
 
     // Add remove from cart
     document.querySelector(`#${itemID}ITEM`).addEventListener("click", () => {
@@ -5971,7 +9465,7 @@ function submitOrder() {
         lineItem += `<strong>Total:</strong> ${document.querySelector('#totalCost').innerHTML}<br>`
 
         Email.send({
-            SecureToken : "ff27d002-dfcb-44ee-a21b-d3fbb0963431",
+            SecureToken : "e6ab7043-8101-41a5-a43e-abfadac04ca7",
             To : 'hannah@cirtex.co.nz',
             Bcc : 'andrew.landes@cirtex.co.nz',
             From : "andrew.landes@cirtex.co.nz",
@@ -5979,7 +9473,7 @@ function submitOrder() {
             Body : lineItem
         }).then(
         message => {
-            alert('Thanks, your order has been sent to our team. We will be in touch.')
+            alert("Thanks, your order has been sent to our team. We will be in touch.", "Success!")
             orderBtn.innerHTML = `Order Submitted`
             orderBtn.style.background = "#cccccc"
             orderBtn.style.cursor = "default"
@@ -5987,6 +9481,6 @@ function submitOrder() {
         })
     } else {
         orderBtn.innerHTML = `Submit Order`
-        alert("You must enter an order number, phone number and delivery address to place an order.")
+        alert("You must enter an order number, phone number and delivery address to place an order.", "Error!")
     }
 }

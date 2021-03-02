@@ -30,68 +30,70 @@ function signUp() {
     let email = document.querySelector('#email').value
     let password = document.querySelector('#password').value
     let displayName = document.querySelector('#fname').value + " " + document.querySelector('#lname').value
-    // Sign up user
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then(function(result) {
-        // Set users display name
-        result.user.updateProfile({
-            displayName: displayName
-        })
+    if (email.includes('cirtex.co.nz')) {
+        auth.createUserWithEmailAndPassword(email, password)
+            .then(function(result) {
 
-        // Set user in a collection in Firestore
-        firebase.firestore().collection('users').doc().set({
-            fname: document.querySelector('#fname').value,
-            lname: document.querySelector('#lname').value,
-            company: document.querySelector('#company').value,
-            email: document.querySelector('#email').value,
-            id: result.user.uid,
-            pricing: null
-        })
-
-    }).catch(err => {
-        console.log(err)
-    })
+                // Set users display name
+                result.user.updateProfile({
+                    displayName: displayName
+                })
+        
+                // Set user in a collection in Firestore
+                firebase.firestore().collection('users').doc().set({
+                    fname: document.querySelector('#fname').value,
+                    lname: document.querySelector('#lname').value,
+                    company: document.querySelector('#company').value,
+                    email: document.querySelector('#email').value,
+                    id: result.user.uid,
+                    pricing: null
+                })
+            }).catch(err => {
+                alert(err, "Error!")
+            })
+    } else {
+        alert("The Civil Hub is still currently in development, check back soon!", "Sorry!")
+    }
 }
 // Sign IN
 function signIn() {
     let email = document.querySelector('#email').value
     let password = document.querySelector('#password').value
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        sendError('show', error.message)
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // ...
-      });
+    auth.signInWithEmailAndPassword(email, password)
+        .catch(function(error) {
+            alert(error.message, "Error!")
+        });
     loader()
 }
 
 function signOut() {
-    firebase.auth().signOut().then(function() {
-        let bg = document.querySelector('.ctx-hub-bg')
-        bg.style.background = "url(https://civilhub.co.nz/public/img/cirtex-civil-hub.jpg)"
-        bg.style.backgroundSize = "cover"
-        bg.style.backgroundRepeat = "no-repeat"
-        bg.style.backgroundPosition = "center"
-        // Sign-out successful.
-    }).catch(function(error) {
-        // An error happened.
-    });
+    auth.signOut()
+        .then(function() {
+            let bg = document.querySelector('.ctx-hub-bg')
+            bg.style.background = "url(https://civilhub.co.nz/public/img/cirtex-civil-hub.jpg)"
+            bg.style.backgroundSize = "cover"
+            bg.style.backgroundRepeat = "no-repeat"
+            bg.style.backgroundPosition = "center"
+            location.reload()
+        }).catch(function(error) {
+            alert(error.message, "Error!")
+        });
 }
 
 function resetPassword() {
     loader()
     let emailAddress = document.querySelector('#email').value
-    firebase.auth().sendPasswordResetEmail(emailAddress).then(function() {
-        setTimeout(() => {
-            switchSignUp('login')
-        },1000)
-      }).catch(function(error) {
-        // An error happened.
-      });
+    auth.sendPasswordResetEmail(emailAddress)
+        .then(function() {
+            setTimeout(() => {
+                switchSignUp('login')
+            },1000)
+        }).catch(function(error) {
+            alert(error.message, "Error!")
+        });
 }
 
-firebase.auth().onAuthStateChanged(function(user){
+auth.onAuthStateChanged(function(user){
     if(user) {
         document.querySelector('#signInForm').style.display = "none"
         document.querySelector('#ctxDashboard').style.display = "block"
@@ -99,7 +101,7 @@ firebase.auth().onAuthStateChanged(function(user){
         getUserID(user)
         setTimeout(() => {
             document.querySelector('.ctx-loader').style.display = "none"
-        },600)
+        },200)
     } else {
         document.querySelector('#signInForm').style.display = "none"
         document.querySelector('#ctxDashboard').style.display = "none"
@@ -108,26 +110,29 @@ firebase.auth().onAuthStateChanged(function(user){
         setTimeout(() => {
             document.querySelector('#signInForm').style.display = "block"
             document.querySelector('.ctx-loader').style.display = "none"
-        },600)
+        },200)
     }
 })
 
 function setPreferences(uid) {
-    firebase.firestore().collection("users").doc(`${uid}`).get().then((snapshot) => {
-        document.querySelector('#welcomeUsername').innerHTML = snapshot.data().fname
-    })
+    users.doc(`${uid}`)
+        .get()
+        .then((snapshot) => {
+            document.querySelector('#welcomeUsername').innerHTML = snapshot.data().fname
+        })
     document.querySelector('.ctx-hub-bg').style.height = "auto"
 }
 
 function getUserID(user) {
-    firebase.firestore().collection("users").get().then((snapshot) => {
-        snapshot.docs.forEach(doc => {
-            let dbCheck = doc.data().email
-            if (dbCheck == user.email) {
-                setPreferences(doc.id)
-            }
+    users.get()
+        .then((snapshot) => {
+            snapshot.docs.forEach(doc => {
+                let dbCheck = doc.data().email
+                if (dbCheck == user.email) {
+                    setPreferences(doc.id)
+                }
+            })
         })
-    })
 }
 
 function loader() {
@@ -151,19 +156,10 @@ function renderInput(ID, type, name) {
     inputFields.appendChild(item)
 }
 
-function sendError(status, message) {
-    document.querySelector('#err').style.display = "none"
-    if (status == 'show') {
-        document.querySelector('#err').style.display = "block"
-        document.querySelector('#err').innerHTML = message
-    }
-}
-
 function switchSignUp(current) {
     let authBtn = document.querySelector('#authBtn')
     let authTitle = document.querySelector('#authTitle')
     let switcher = document.querySelector('#switcher')
-    sendError(false, null)
     let myNode = document.querySelector('#inputFields');
     while (myNode.firstChild) {
         myNode.removeChild(myNode.lastChild);

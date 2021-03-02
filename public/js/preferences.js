@@ -23,12 +23,24 @@ function chooseProfilePic(e) {
 // If logged in, assign users profile picture
 auth.onAuthStateChanged(function(user){
     if (user) {
-        if (storage.ref(`users/${user.uid}/profile.jpg`).getDownloadURL()) {
-            storage.ref(`users/${user.uid}/profile.jpg`).getDownloadURL()
-                .then(imgUrl => {
-                    document.querySelector('#uploadProfilePicture').src = imgUrl
+        storage.ref()
+            .child(`users`)
+            .child(`${user.uid}`)
+            .child(`profile.jpg`)
+            .getDownloadURL()
+            .then((file) => {
+                document.querySelector('#uploadProfilePicture').src = file
+                if (document.querySelector('#userPostProfileImg')) {
                     document.querySelector('#userPostProfileImg').src = document.querySelector('#uploadProfilePicture').src
+                }
+                    
+        }).catch(() => {
+            setTimeout(() => {
+                document.querySelector('.ctx-popup-tip').style.display = "flex"
+                document.querySelector('#profilePicToolTip').addEventListener("click", () => {
+                    document.querySelector('#updateProfilePicture').click()
                 })
-        }
+            }, 1000);
+        })
     }
 })
