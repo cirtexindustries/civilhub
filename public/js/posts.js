@@ -13,6 +13,19 @@ auth.onAuthStateChanged(function(user){
             .limit(4)
             .get()
             .then(querySnapshot => {
+
+                // Check for Post Notification URL
+                const queryString = window.location.search;
+                if (queryString) {
+                    const urlParams = new URLSearchParams(queryString);
+                    const originalPostID = urlParams.get('post')
+                    if (originalPostID.length == 20) {
+                        setTimeout(() => {
+                            renderSinglePost(`${originalPostID}`)
+                        }, 500)
+                    }
+                }
+
                 clearPosts()
                 querySnapshot.forEach(doc => {
                     let timePosted = formatDate(doc.data().postedDate)
@@ -913,14 +926,12 @@ function updateComment(postID, commentID) {
             if (commentContainer) {
                 commentContainer.remove()
             }
-            console.log("1")
             // Render updated comment
             posts.doc(`${postID}`)
                 .collection("comments")
                 .doc(`${commentID}`)
                 .get()
                 .then(item => {
-                    console.log("2")
                     renderComment(item, `${postID}`)
                     document.querySelector('body').removeChild(document.querySelector('#commentBG'))
                     alert("Your comment has been updated.", "Success!")
@@ -1138,7 +1149,6 @@ function addCommentToDB(postID, startCommentID, thisUser, img, tag, ref) {
 }
 
 function renderComment(postInfo, postID) {
-    console.log("3")
     const post = document.querySelector(`#COMMENTCONTAINER${postID}`)
     const comment = `
         <div class="ctx-comment-wrapper" id="${postInfo.id}">

@@ -184,7 +184,7 @@ function sendTagNotification(taggedEmail, postID, user) {
                                   <table border="0" cellspacing="0" cellpadding="0">
                                     <tr style="padding: 12px 18px;text-decoration: none;">
                                       <td align="center" style="border-radius: 3px" bgcolor="#e80032">
-                                      <a href="https://civilhub.co.nz" target="_blank" style="
+                                      <a href="https://civilhub.co.nz?post=${postID}" target="_blank" style="
                                       font-size: 16px;
                                       font-family: Helvetica, Arial, sans-serif;
                                       color: #ffffff;
@@ -220,7 +220,8 @@ function getNotifications() {
     .then((snapshot) => {
         snapshot.docs.forEach(doc => {
             if (doc.data().email == currentUser.email) {
-                users.doc(doc.id).collection("notifications")
+                users.doc(doc.id)
+                  .collection("notifications")
                   .get()
                   .then((snapshot) => {
                       snapshot.docs.forEach(doc => {
