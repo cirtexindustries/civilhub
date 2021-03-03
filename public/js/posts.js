@@ -14,10 +14,10 @@ auth.onAuthStateChanged(function(user){
             .get()
             .then(querySnapshot => {
 
-                // Check for Post Notification URL
-                const queryString = window.location.search;
+                // Check for post notification URL
+                const queryString = window.location.search
                 if (queryString) {
-                    const urlParams = new URLSearchParams(queryString);
+                    const urlParams = new URLSearchParams(queryString)
                     const originalPostID = urlParams.get('post')
                     if (originalPostID.length == 20) {
                         setTimeout(() => {
@@ -238,6 +238,7 @@ function renderPost(doc, timePosted) {
                     <!-- End Post Image -->`
                     :""}
                     <div class="post-actions ctx-post-reactions">
+                        <div class="ctx-post-mobile-stats">
                         ${(screen.width < 900)
                         ?`<div class="likesComments">
                             <div><p><span id="likes${doc.id}">0</span> Upvotes</p></div>
@@ -245,6 +246,7 @@ function renderPost(doc, timePosted) {
                         </div>`
                         :``}
                         <div class="ctx-post-categories categories-post" id="postCats${doc.id}"></div>
+                        </div>
                         <div class="likeComment">
                             <div onclick="startComment('${doc.id}')">
                             <i class="fad fa-comment-lines"></i> Reply to Post

@@ -518,6 +518,11 @@ iframe {
             .post-btn {
                 width: 60%;
             }
+
+            .ctx-post-mobile-stats {
+                width: 100%;
+                justify-content: space-between;
+            }
         }
 
         .ctx-post-reactions {
@@ -631,7 +636,8 @@ iframe {
 
 @media(max-width: 800px) {
     .likesComments {
-        width: 100%;
+        width: fit-content;
+        background: transparent;
         display: flex!important;
         flex-direction: row!important;
         justify-content: flex-start!important;
@@ -2022,6 +2028,12 @@ button:hover {
 
     div {
         margin: 0 5px 0 0!important;
+    }
+}
+
+@media(max-width: 900px) {
+    .categories-post {
+        justify-content: flex-end!important;
     }
 }
 

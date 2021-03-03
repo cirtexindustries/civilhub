@@ -621,6 +621,12 @@ iframe {
   .ctx-post .post-actions .post-btn {
     width: 60%;
   }
+  .ctx-post .post-actions .ctx-post-mobile-stats {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .ctx-post .ctx-post-reactions {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -760,7 +766,10 @@ iframe {
 
 @media (max-width: 800px) {
   .likesComments {
-    width: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background: transparent;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -2506,6 +2515,14 @@ button:hover {
 
 .categories-post div {
   margin: 0 5px 0 0 !important;
+}
+
+@media (max-width: 900px) {
+  .categories-post {
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: flex-end !important;
+  }
 }
 
 .ctx-unmatched-filter {
