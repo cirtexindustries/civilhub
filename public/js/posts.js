@@ -166,6 +166,10 @@ function renderPost(doc, timePosted) {
                             ${(postData.postedByID == currentUser.uid)
                                 ?`<i class="far fa-ellipsis-h icon-clickable" id="POSTELLIPSES${doc.id}"></i>
                                     <div class="ctx-post-dropdown" style="display:none" id="POSTOPTIONS${doc.id}">
+                                        <div class="ctx-dropdown-option" onclick="copyPostURL('${doc.id}')">
+                                            <input type="text" class="ctx-copy-url" value="https://civilhub.co.nz?post=${doc.id}" id="postURL${doc.id}">
+                                            <i class="fad fa-link"></i> Copy Post URL
+                                        </div>
                                         <div class="ctx-dropdown-option" onclick="editSinglePost('${doc.id}')">
                                             <i class="fad fa-pencil"></i> Edit Post
                                         </div>
@@ -175,6 +179,10 @@ function renderPost(doc, timePosted) {
                                     </div>`
                                 :`<i class="far fa-ellipsis-h icon-clickable" id="POSTELLIPSES${doc.id}"></i>
                                     <div class="ctx-post-dropdown" style="display:none" id="POSTOPTIONS${doc.id}">
+                                        <div class="ctx-dropdown-option" onclick="copyPostURL('${doc.id}')">
+                                            <input type="text" class="ctx-copy-url" value="https://civilhub.co.nz?post=${doc.id}" id="postURL${doc.id}">
+                                            <i class="fad fa-link"></i> Copy Post URL
+                                        </div>
                                         <div class="ctx-dropdown-option" onclick="reportPost('${doc.id}')">
                                             <i class="fad fa-exclamation-circle"></i> Report Post
                                         </div>
@@ -317,6 +325,7 @@ function renderPost(doc, timePosted) {
     }
 }
 
+// Convert category title into id
 function convertCategory(category) {
     switch (category) {
         case "Erosion & Sediment Control":
@@ -334,6 +343,20 @@ function convertCategory(category) {
         case "Paving":
             return "cat_paving"
     }
+}
+
+// Copy Post URL
+function copyPostURL(postID) {
+    let URL = document.querySelector(`#postURL${postID}`)
+    URL.select();
+    URL.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    document.querySelector('body').removeChild(document.querySelector('.tooltip-blur'))
+    let tooltips = document.querySelectorAll('.ctx-post-dropdown')
+    tooltips.forEach(tooltip => {
+        tooltip.style.display = "none"
+    })
+    alert("The post URL has been copied to your clipboard.", "Success!")
 }
 
 function openLightbox(id) {
@@ -672,6 +695,7 @@ function renderPostCategory(category, highlightedCategory) {
             querySnapshot.forEach(doc => {
                 const postData = doc.data()
                 let timePosted = formatDate(postData.postedDate)
+                document.querySelector('#bgBlur').style.display = "none"
                 renderPost(doc, timePosted)
             })
 

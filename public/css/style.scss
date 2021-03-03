@@ -4,7 +4,7 @@ $white: #FFFFFF;
 $red: #E80032;
 $darkred: #c41a33;
 $grey: #F4F4F4;
-$lightgrey: rgb(245, 245, 245);
+$lightgrey: #F4F4F4;
 $darkgrey: #CCCCCC;
 
 // Fonts
@@ -2627,4 +2627,12 @@ button:hover {
     position: relative;
     margin: 10px 0 0 0;
     width: 100%;
+}
+
+.ctx-copy-url {
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+    top: -1000px;
+    left: 0;
 }
