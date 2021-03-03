@@ -848,7 +848,7 @@ iframe {
 }
 
 .ctx-post-details .ctx-post-dropdown {
-  background: #F4F4F4;
+  background: #E4E4E4;
   -webkit-box-shadow: 0 0 350px 100px rgba(255, 255, 255, 0.5);
           box-shadow: 0 0 350px 100px rgba(255, 255, 255, 0.5);
 }
@@ -1205,7 +1205,7 @@ iframe {
 }
 
 .ctx-comment-wrapper .comment-edit-btn {
-  background: #F4F4F4;
+  background: #E4E4E4;
 }
 
 .ctx-comment-wrapper .comment-edit-btn:hover {
@@ -1375,7 +1375,7 @@ iframe {
     display: none;
     right: -14px;
     border: solid 7px transparent;
-    border-left: solid 7px #F4F4F4;
+    border-left: solid 7px #E4E4E4;
   }
   .ctx-comment-wrapper .ctx-comment-content p {
     font-size: 13px;
@@ -2504,6 +2504,10 @@ button:hover {
     min-width: -moz-fit-content;
     min-width: fit-content;
   }
+  .ctx-post-categories .ctx-post-category i {
+    font-size: 12px !important;
+    margin-left: 0 !important;
+  }
   .ctx-post-categories::-webkit-scrollbar {
     display: none;
   }
@@ -2522,6 +2526,9 @@ button:hover {
     -webkit-box-pack: end !important;
         -ms-flex-pack: end !important;
             justify-content: flex-end !important;
+  }
+  .categories-post div {
+    margin: 0 !important;
   }
 }
 
@@ -2761,7 +2768,7 @@ button:hover {
 }
 
 .product-order .product-body:nth-child(odd) {
-  background: #F4F4F4;
+  background: #E4E4E4;
   border-radius: 10px;
   z-index: 1;
 }
@@ -2840,7 +2847,7 @@ button:hover {
 }
 
 .product-order .product-body-added:nth-child(odd) {
-  background: #F4F4F4;
+  background: #E4E4E4;
   border-radius: 10px;
   z-index: 1;
 }
@@ -3020,8 +3027,8 @@ button:hover {
     width: 100%;
     height: 30px;
     top: 0;
-    -webkit-box-shadow: inset -65px 0 20px -20px #f4f4f4;
-            box-shadow: inset -65px 0 20px -20px #f4f4f4;
+    -webkit-box-shadow: inset -65px 0 20px -20px #E4E4E4;
+            box-shadow: inset -65px 0 20px -20px #E4E4E4;
     border-radius: 0;
     pointer-events: none;
   }
@@ -3080,7 +3087,7 @@ button:hover {
 }
 
 .ctx-post-dropdown .ctx-dropdown-option:hover {
-  background: #F4F4F4;
+  background: #E4E4E4;
   color: #E80032;
 }
 

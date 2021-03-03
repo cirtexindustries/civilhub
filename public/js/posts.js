@@ -319,7 +319,7 @@ function renderPost(doc, timePosted) {
         if (categories[i] != "Everything") {
             const category = `
             <div class="ctx-post-category" onclick="renderPostCategory('${categories[i]}', 
-            convertCategory('${categories[i]}'))"><i class="fad fa-hashtag"></i> ${categories[i]}</div>
+            convertCategory('${categories[i]}'))"><i class="fad fa-tags"></i> ${categories[i]}</div>
             `
             document.querySelector(`#postCats${doc.id}`).insertAdjacentHTML('afterbegin', category)
             return
@@ -1534,7 +1534,7 @@ function reportPost(postID) {
 
 function showTooltips() {
     const tooltipBG = `
-        <div class="ctx-background-blur tooltip-blur" onmousedown="hideTooltips(event)"></div>
+        <div class="ctx-background-blur tooltip-blur" onclick="hideTooltips(event)"></div>
     `
     document.querySelector('body').insertAdjacentHTML('afterbegin', tooltipBG)
 }
