@@ -55,14 +55,14 @@ function startPostStatic() {
     if (!document.querySelector('#startNewPost')) {
         const postContainer = `
             <div id="postCategories" class="ctx-post-categories">
-                <div class="ctx-post-category ctx-category-selected" id="cat_everything" onclick="renderPostCategory('Everything', this.id)">All Posts</div>
-                <div class="ctx-post-category" id="cat_esc" onclick="renderPostCategory('Erosion & Sediment Control', this.id)">Erosion & Sediment Control</div>
-                <div class="ctx-post-category" id="cat_blockretaining" onclick="renderPostCategory('Block Retaining Systems', this.id)">Block Retaining Systems</div>
-                <div class="ctx-post-category" id="cat_srp" onclick="renderPostCategory('Sediment Retention Ponds', this.id)">Sediment Retention Ponds</div>
-                <div class="ctx-post-category" id="cat_pavements" onclick="renderPostCategory('Pavements', this.id)">Pavements</div>
-                <div class="ctx-post-category" id="cat_slopestability" onclick="renderPostCategory('Slope Stability', this.id)">Slope Stability</div>
-                <div class="ctx-post-category" id="cat_stormwater" onclick="renderPostCategory('Stormwater', this.id)">Stormwater</div>
-                <div class="ctx-post-category" id="cat_paving" onclick="renderPostCategory('Permeable Paving', this.id)">Permeable Paving</div>
+                <div class="ctx-post-category ctx-category-selected" id="cat_everything" onclick="renderPostCategory('Everything', this.id)"><i class="fad fa-tags"></i> All Posts</div>
+                <div class="ctx-post-category" id="cat_esc" onclick="renderPostCategory('Erosion & Sediment Control', this.id)"><i class="fad fa-tags"></i> Erosion & Sediment Control</div>
+                <div class="ctx-post-category" id="cat_blockretaining" onclick="renderPostCategory('Block Retaining Systems', this.id)"><i class="fad fa-tags"></i> Block Retaining Systems</div>
+                <div class="ctx-post-category" id="cat_pavements" onclick="renderPostCategory('Pavements', this.id)"><i class="fad fa-tags"></i> Pavements</div>
+                <div class="ctx-post-category" id="cat_srp" onclick="renderPostCategory('Sediment Retention Ponds', this.id)"><i class="fad fa-tags"></i> Sediment Retention Ponds</div>
+                <div class="ctx-post-category" id="cat_slopestability" onclick="renderPostCategory('Slope Stability', this.id)"><i class="fad fa-tags"></i> Slope Stability</div>
+                <div class="ctx-post-category" id="cat_stormwater" onclick="renderPostCategory('Stormwater', this.id)"><i class="fad fa-tags"></i> Stormwater</div>
+                <div class="ctx-post-category" id="cat_paving" onclick="renderPostCategory('Permeable Paving', this.id)"><i class="fad fa-tags"></i> Permeable Paving</div>
                 <div class="ctx-scroll-fade"></div>
             </div>
             <div class="ctx-post-categories">
@@ -319,7 +319,7 @@ function renderPost(doc, timePosted) {
         if (categories[i] != "Everything") {
             const category = `
             <div class="ctx-post-category" onclick="renderPostCategory('${categories[i]}', 
-            convertCategory('${categories[i]}'))">${categories[i]}</div>
+            convertCategory('${categories[i]}'))"><i class="fad fa-hashtag"></i> ${categories[i]}</div>
             `
             document.querySelector(`#postCats${doc.id}`).insertAdjacentHTML('afterbegin', category)
             return

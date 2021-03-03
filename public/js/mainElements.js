@@ -71,7 +71,7 @@ const renderMenu = `
         <li onclick='window.location.href = "downloads.html"'><i class="fad fa-book"></i> Technical Documents</li>
     </ul>
     <br>
-    <span class="ctx-version">Beta Version 0.92 | <a href="mailto:andrew.landes@cirtex.co.nz">Report a Bug</a></span>
+    <span class="ctx-version">Beta Version 0.96 | <a href="mailto:andrew.landes@cirtex.co.nz">Report a Bug</a></span>
     <span class="ctx-version">Powered by Cirtex®</span>
     `
 document.querySelector('#menu').insertAdjacentHTML('beforeend', renderMenu)

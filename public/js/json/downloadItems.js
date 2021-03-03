@@ -51,14 +51,10 @@ const downloadItems = {
             link: "https://3724441.app.netsuite.com/core/media/media.nl?id=2915679&c=3724441&h=e2472877fa927665eb5c&_xt=.pdf"
         }],
         1: [{
-            name: "Triton Vault Double Stack",
-            link: "https://3724441.app.netsuite.com/core/media/media.nl?id=2915572&c=3724441&h=6f1b91214fa610ebb050&_xt=.pdf"
-        }],
-        2: [{
             name: "Triton Vault Standard Drawing",
             link: "https://3724441.app.netsuite.com/core/media/media.nl?id=2915675&c=3724441&h=6c15b51d4566afdb7e8e&_xt=.pdf&fcts=20200813151230&whence="
         }],
-        3: [{
+        2: [{
             name: "Triton Vault Soakage Calculator",
             link: "https://3724441.app.netsuite.com/core/media/media.nl?id=4408385&c=3724441&h=91e664c7ec140a79ccc2&_xt=.xls"
         }],
